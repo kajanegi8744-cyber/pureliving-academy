@@ -1,28 +1,97 @@
-<!doctype html>
+
+<!DOCTYPE html>
 <html lang="en">
 <head>
-<meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1">
-<meta name="description" content="Choose a product from the store to see its details and add it to the demo cart.">
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
 <title>Product Details | PureLiving</title>
-<!-- Google Tag Manager -->
-<script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
-new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
-j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
-'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
-})(window,document,'script','dataLayer','GTM-ML22WP84');</script>
-<!-- End Google Tag Manager -->
-<link rel="stylesheet" href="css/styles.css">
-<script defer src="js/app.js"></script>
-
+<meta name="description" content="Explore home and lifestyle essentials at PureLiving.">
+<script>
+window.dataLayer=window.dataLayer||[];
+(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src='https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);})(window,document,'script','dataLayer','GTM-ML22WP84');
+</script>
+<style>
+*{box-sizing:border-box}body{margin:0;font-family:Arial,sans-serif;color:#24352d;background:#fff;line-height:1.6}a{color:inherit;text-decoration:none}button{cursor:pointer;font:inherit}.top{background:#173e34;color:white;text-align:center;padding:8px;font-size:12px}.header{padding:17px 5%;display:flex;justify-content:space-between;align-items:center;border-bottom:1px solid #e5e9e2;gap:15px;flex-wrap:wrap}.logo{font-family:Georgia,serif;font-size:27px;font-weight:bold;color:#173e34}.logo span{color:#c99b51}.nav{display:flex;gap:20px;font-size:13px;font-weight:bold}.wrap{max-width:1100px;margin:auto;padding:25px 22px 65px}.crumb{font-size:13px;color:#778078;margin:10px 0 30px}.product{display:grid;grid-template-columns:1fr 1fr;gap:55px;align-items:start}.visual{min-height:390px;background:#f3f2eb;display:flex;align-items:center;justify-content:center;border-radius:5px;position:relative}.visual .emoji{font-size:120px}.visual .label{position:absolute;top:18px;left:18px;background:white;padding:5px 12px;font-size:11px}.eyebrow{color:#9a7337;letter-spacing:2px;font-size:11px;font-weight:bold;text-transform:uppercase}.info h1{font-family:Georgia,serif;font-weight:normal;font-size:42px;line-height:1.2;margin:12px 0}.stars{color:#bd8d38;font-size:14px}.price{font-size:27px;font-weight:bold;color:#173e34;margin:18px 0}.old{font-size:15px;text-decoration:line-through;color:#929990;font-weight:normal;margin-left:10px}.desc{color:#6c776e;font-size:14px}.rule{border:0;border-top:1px solid #e5e9e2;margin:22px 0}.quantity{display:flex;align-items:center;gap:15px;margin:20px 0}.quantity button{border:1px solid #dfe3dc;background:#fff;padding:7px 14px}.btn{border:1px solid #173e34;background:#173e34;color:white;padding:13px 18px;border-radius:3px;font-weight:bold;font-size:13px}.btn:hover{background:#28584a}.secondary{background:white;color:#173e34}.actions{display:flex;gap:10px;flex-wrap:wrap}.actions button{flex:1;min-width:140px}.benefits{display:grid;grid-template-columns:repeat(3,1fr);gap:12px;margin:25px 0}.benefit{background:#f7f6f0;padding:14px;font-size:12px}.more{margin-top:45px;padding-top:30px;border-top:1px solid #e5e9e2}.more h2{font-family:Georgia,serif;font-weight:normal}.more p{color:#6c776e}.notice{font-size:12px;color:#6c776e;background:#f6f5ef;padding:12px;margin-top:22px}.footer{background:#f4f3ed;padding:28px 5%;font-size:12px;color:#69736b}.toast{display:none;position:fixed;bottom:20px;right:20px;background:#173e34;color:white;padding:14px 18px;border-radius:4px;z-index:5}@media(max-width:700px){.product{grid-template-columns:1fr;gap:25px}.visual{min-height:280px}.visual .emoji{font-size:95px}.info h1{font-size:34px}.nav{gap:12px;flex-wrap:wrap}.benefits{grid-template-columns:1fr}.wrap{padding:20px 16px 45px}}
+</style>
 </head>
 <body>
-<!-- Google Tag Manager (noscript) -->
-<noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-ML22WP84"
-height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
-<!-- End Google Tag Manager (noscript) -->
-<div id="site-header"></div>
+<noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-ML22WP84" height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+<div class="top">THOUGHTFUL ESSENTIALS FOR EVERYDAY LIVING · DEMO STORE</div>
+<header class="header">
+<a class="logo" href="index.html">Pure<span>Living</span></a>
+<nav class="nav"><a href="index.html">Home</a><a href="products.html">Shop</a><a href="resources.html">Resources</a><a href="contact.html">Contact</a><a href="cart.html">Bag (<span id="cartCount">0</span>)</a></nav>
+</header>
 <main class="wrap">
-<span class="eyebrow">Product details</span><div id="product-detail" class="card"></div>
+<div class="crumb"><a href="index.html">Home</a> / <a href="products.html">Shop</a> / Product details</div>
+<div class="product">
+<div class="visual"><span class="label">DEMO COLLECTION</span><div class="emoji" id="productEmoji">💧</div></div>
+<section class="info">
+<div class="eyebrow" id="category">WATER PURIFIERS</div>
+<h1 id="productName">Aqua Pro Water Purifier</h1>
+<div class="stars">★★★★★ <span style="color:#778078">(Demo product rating)</span></div>
+<div class="price" id="price">₹8,999 <span class="old" id="oldPrice">₹10,349</span></div>
+<p class="desc" id="description">A dependable everyday water purification solution, designed to complement your home.</p>
+<hr class="rule">
+<p><strong>Product highlights</strong></p>
+<ul><li>Designed for everyday home use</li><li>Practical, simple product experience</li><li>Demo item for analytics practice</li></ul>
+<div class="quantity"><strong>Quantity</strong><button id="minus" aria-label="Decrease quantity">−</button><span id="qty">1</span><button id="plus" aria-label="Increase quantity">+</button></div>
+<div class="actions"><button class="btn" id="add">Add to Bag</button><button class="btn secondary" id="buy">Buy Now →</button></div>
+<div class="benefits"><div class="benefit">✓ Easy demo checkout</div><div class="benefit">✓ No real payment</div><div class="benefit">✓ Practice store</div></div>
+<div class="notice">Practice website only. Products, prices, ratings and orders are demonstration data. No real payment is collected.</div>
+</section>
+</div>
+<section class="more"><h2>Product details</h2><p id="detailText">This sample product page helps you practise product views, add-to-cart events and checkout journeys. Choose a quantity and add the item to your demo bag.</p><h2>Need help choosing?</h2><p>Contact our demo team or request a product quote.</p><div class="actions"><a class="btn" href="contact.html">Contact us</a><a class="btn secondary" href="quote.html">Request a quote</a></div></section>
 </main>
-<div id="site-footer"></div>
-</body></html>
+<footer class="footer">© 2026 PureLiving Demo Store · Practice website only · <a href="index.html">Home</a> · <a href="resources.html">Resources</a></footer>
+<div class="toast" id="toast" role="status"></div>
+<script>
+(function(){
+const products=[
+{id:"PL-WP-001",name:"Aqua Pro Water Purifier",price:8999,category:"Water Purifiers",icon:"💧",desc:"A dependable everyday water purification solution."},
+{id:"PL-WP-002",name:"Aqua Max Water Purifier",price:12499,category:"Water Purifiers",icon:"🚰",desc:"A premium option for your household."},
+{id:"PL-WP-003",name:"Aqua Compact Purifier",price:6499,category:"Water Purifiers",icon:"🫗",desc:"A compact choice for smaller spaces."},
+{id:"PL-AP-001",name:"Air Pure 300",price:7499,category:"Air Purifiers",icon:"🌿",desc:"Designed to complement your everyday living space."},
+{id:"PL-AP-002",name:"Air Pure 500",price:11999,category:"Air Purifiers",icon:"🍃",desc:"A larger air-care option for your home."},
+{id:"PL-KA-001",name:"Smart Electric Kettle",price:1499,category:"Kitchen Appliances",icon:"☕",desc:"Make your daily hot drinks with ease."},
+{id:"PL-KA-002",name:"Mixer Pro",price:3499,category:"Kitchen Appliances",icon:"🥣",desc:"A versatile helper for everyday preparation."},
+{id:"PL-KA-003",name:"Daily Use Blender",price:2999,category:"Kitchen Appliances",icon:"🥤",desc:"A simple blender for everyday recipes."},
+{id:"PL-HE-001",name:"Home Care Kit",price:999,category:"Home Essentials",icon:"🧺",desc:"Everyday helpers for a tidier home."},
+{id:"PL-HE-002",name:"Smart Room Humidifier",price:2499,category:"Home Essentials",icon:"💨",desc:"A compact addition to your home environment."},
+{id:"PL-HE-003",name:"Digital Kitchen Scale",price:799,category:"Home Essentials",icon:"⚖️",desc:"A practical tool for precise kitchen measurements."},
+{id:"PL-HE-004",name:"Premium Storage Set",price:1299,category:"Home Essentials",icon:"📦",desc:"Keep household items neatly organised."}
+];
+const params=new URLSearchParams(location.search);
+const id=params.get("id")||params.get("product")||"PL-WP-001";
+const product=products.find(p=>p.id===id)||products[0];
+const $=s=>document.querySelector(s);
+const money=n=>"₹"+Number(n).toLocaleString("en-IN");
+const fire=(event,data={})=>window.dataLayer.push({...data,event,demo_mode:true});
+$("#productName").textContent=product.name;
+$("#category").textContent=product.category;
+$("#productEmoji").textContent=product.icon;
+$("#description").textContent=product.desc;
+$("#detailText").textContent=product.desc+" This sample product page helps you practise product views, add-to-cart events and checkout journeys.";
+$("#price").innerHTML=money(product.price)+' <span class="old" id="oldPrice">'+money(Math.round(product.price*1.15))+"</span>";
+let qty=1;
+const cartKey="pl_demo_cart_v1";
+function getCart(){try{return JSON.parse(localStorage.getItem(cartKey)||"[]")}catch(e){return[]}}
+function saveCart(c){localStorage.setItem(cartKey,JSON.stringify(c));$("#cartCount").textContent=c.reduce((sum,x)=>sum+x.qty,0)}
+function addToCart(goCheckout){
+let cart=getCart(),item=cart.find(x=>x.id===product.id);
+if(item)item.qty+=qty;else cart.push({id:product.id,price:product.price,qty:qty});
+saveCart(cart);
+fire("add_to_cart",{currency:"INR",value:product.price*qty,items:[{item_id:product.id,item_name:product.name,item_category:product.category,price:product.price,quantity:qty}]});
+$("#toast").textContent=product.name+" added to your bag";$("#toast").style.display="block";
+setTimeout(()=>$("#toast").style.display="none",2400);
+if(goCheckout)location.href="index.html#checkout";
+}
+$("#minus").addEventListener("click",()=>{qty=Math.max(1,qty-1);$("#qty").textContent=qty});
+$("#plus").addEventListener("click",()=>{qty=Math.min(20,qty+1);$("#qty").textContent=qty});
+$("#add").addEventListener("click",()=>addToCart(false));
+$("#buy").addEventListener("click",()=>addToCart(true));
+const cart=getCart();$("#cartCount").textContent=cart.reduce((sum,x)=>sum+x.qty,0);
+fire("view_item",{currency:"INR",value:product.price,items:[{item_id:product.id,item_name:product.name,item_category:product.category,price:product.price,quantity:1}]});
+})();
+</script>
+</body>
+</html>
