@@ -1,28 +1,183 @@
-<!doctype html>
+```html
+<!DOCTYPE html>
 <html lang="en">
 <head>
-<meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1">
-<meta name="description" content="Practice tracking a successful quote request.">
-<title>Request a Quote | PureLiving</title>
-<!-- Google Tag Manager -->
-<script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
-new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
-j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
-'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
-})(window,document,'script','dataLayer','GTM-ML22WP84');</script>
-<!-- End Google Tag Manager -->
-<link rel="stylesheet" href="css/styles.css">
-<script defer src="js/app.js"></script>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Request a Quote | PureLiving</title>
+  <meta name="description" content="Request a personalised quote from PureLiving.">
+  
+  <!-- Google Tag Manager -->
+  <script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+  new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+  j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+  'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+  })(window,document,'script','dataLayer','GTM-ML22WP84');</script>
+  <!-- End Google Tag Manager -->
 
+  <style>
+    *{box-sizing:border-box}
+    body{margin:0;font-family:Arial,sans-serif;background:#f6f7f2;color:#24352c}
+    header{background:#fff;padding:18px 7%;display:flex;justify-content:space-between;align-items:center;gap:18px;flex-wrap:wrap;border-bottom:1px solid #e5e9e1}
+    .brand{font-size:24px;font-weight:800;color:#245c43;text-decoration:none}
+    nav{display:flex;gap:18px;flex-wrap:wrap}
+    nav a{color:#35463b;text-decoration:none;font-size:14px}
+    nav a:hover{color:#26734d}
+    .hero{background:#e5eee4;padding:45px 7%;text-align:center}
+    .hero h1{font-size:36px;margin:0 0 12px}
+    .hero p{max-width:650px;margin:auto;line-height:1.7;color:#526456}
+    main{max-width:1000px;margin:38px auto;padding:0 20px;display:grid;grid-template-columns:1fr 1.3fr;gap:28px;align-items:start}
+    .info,.form-card{background:#fff;padding:28px;border-radius:16px;box-shadow:0 8px 30px #233b2c0d}
+    h2{margin-top:0}
+    .info p{line-height:1.7;color:#5d6c61}
+    .benefit{padding:12px 0;border-bottom:1px solid #edf0eb}
+    label{display:block;font-weight:700;font-size:14px;margin:17px 0 7px}
+    input,select,textarea{width:100%;padding:12px;border:1px solid #ccd5cb;border-radius:8px;font:inherit;background:#fff}
+    input:focus,select:focus,textarea:focus{outline:2px solid #a8cfb1;border-color:#397c52}
+    textarea{min-height:110px;resize:vertical}
+    button{margin-top:20px;width:100%;padding:14px;background:#286443;color:#fff;border:0;border-radius:9px;font-weight:700;font-size:16px;cursor:pointer}
+    button:hover{background:#1d5034}
+    .note{font-size:12px;color:#6b786e;line-height:1.6}
+    #success{display:none;background:#e5f5e8;color:#205b34;padding:16px;border-radius:9px;margin-top:18px;line-height:1.6}
+    #error{display:none;color:#a32929;margin-top:12px;font-size:14px}
+    footer{text-align:center;padding:28px 15px;color:#6a766c;font-size:13px}
+    @media(max-width:700px){main{grid-template-columns:1fr}.hero h1{font-size:29px}header{padding:16px 5%}}
+  </style>
 </head>
 <body>
-<!-- Google Tag Manager (noscript) -->
-<noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-ML22WP84"
-height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
-<!-- End Google Tag Manager (noscript) -->
-<div id="site-header"></div>
-<main class="wrap">
-<span class="eyebrow">Made for your needs</span><h1>Request a quote</h1><p>Practice a validated quote request. Data remains local to this demo.</p><form data-demo-form="quote_request"><label>Name<input name="name" required minlength="2"></label><label>Email<input type="email" name="email" required></label><label>Product interest<select name="product" required><option value="">Choose one</option><option>Water purifier</option><option>Air purifier</option><option>Kitchen appliance</option></select></label><label>Quantity<input type="number" name="quantity" min="1" max="100" required></label><button>Request Demo Quote</button><p class="form-status" aria-live="polite"></p></form>
-</main>
-<div id="site-footer"></div>
-</body></html>
+  <!-- Google Tag Manager (noscript) -->
+  <noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-ML22WP84"
+  height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+  <!-- End Google Tag Manager (noscript) -->
+
+  <header>
+    <a class="brand" href="index.html">PureLiving</a>
+    <nav>
+      <a href="index.html">Home</a>
+      <a href="products.html">Shop</a>
+      <a href="contact.html">Contact</a>
+      <a href="resources.html">Resources</a>
+    </nav>
+  </header>
+
+  <section class="hero">
+    <h1>Request a Quote</h1>
+    <p>Tell us what you need. Share a few details and explore a personalised solution for your home and wellness needs.</p>
+  </section>
+
+  <main>
+    <section class="info">
+      <h2>Let's find the right solution</h2>
+      <p>Use this form to describe your requirements. This is a demonstration website for learning form tracking and analytics.</p>
+      <div class="benefit">✓ Personalised request</div>
+      <div class="benefit">✓ Clear service requirements</div>
+      <div class="benefit">✓ Simple request process</div>
+      <p class="note">Demo notice: this form does not send your information to a real sales team or backend.</p>
+    </section>
+
+    <section class="form-card">
+      <h2>Quote details</h2>
+      <form id="quoteForm">
+        <label for="fullName">Full name *</label>
+        <input id="fullName" name="full_name" type="text" autocomplete="name" required>
+
+        <label for="email">Email address *</label>
+        <input id="email" name="email" type="email" autocomplete="email" required>
+
+        <label for="service">What do you need a quote for? *</label>
+        <select id="service" name="service_type" required>
+          <option value="">Select a service</option>
+          <option value="home_wellness">Home wellness products</option>
+          <option value="fitness">Fitness and exercise</option>
+          <option value="sleep">Sleep and relaxation</option>
+          <option value="consultation">Wellness consultation</option>
+          <option value="other">Other requirements</option>
+        </select>
+
+        <label for="budget">Estimated budget</label>
+        <select id="budget" name="budget_range">
+          <option value="">Choose a range (optional)</option>
+          <option value="under_1000">Under ₹1,000</option>
+          <option value="1000_5000">₹1,000–₹5,000</option>
+          <option value="5000_10000">₹5,000–₹10,000</option>
+          <option value="over_10000">Above ₹10,000</option>
+        </select>
+
+        <label for="details">Tell us about your requirements *</label>
+        <textarea id="details" name="requirements" required placeholder="Describe what you are looking for..."></textarea>
+
+        <button type="submit" id="submitBtn">Submit Quote Request</button>
+        <div id="error" role="alert"></div>
+        <div id="success" role="status">
+          <strong>Request submitted successfully!</strong>
+          <p>Your demo quote request has been recorded on this page. No information was sent to a server.</p>
+          <a href="index.html">Return to home</a>
+        </div>
+        <p class="note">* Required fields. Do not enter sensitive or confidential information.</p>
+      </form>
+    </section>
+  </main>
+
+  <footer>© 2026 PureLiving Academy · Demo website for analytics practice</footer>
+
+  <script>
+    window.dataLayer = window.dataLayer || [];
+
+    (function () {
+      var form = document.getElementById('quoteForm');
+      var button = document.getElementById('submitBtn');
+      var success = document.getElementById('success');
+      var error = document.getElementById('error');
+      var submitted = false;
+      var started = false;
+
+      form.addEventListener('focusin', function () {
+        if (!started) {
+          started = true;
+          window.dataLayer.push({
+            event: 'quote_form_start',
+            form_id: 'quoteForm',
+            form_type: 'quote_request'
+          });
+        }
+      });
+
+      form.addEventListener('submit', function (event) {
+        event.preventDefault();
+        error.style.display = 'none';
+
+        if (submitted) return;
+
+        if (!form.checkValidity()) {
+          form.reportValidity();
+          window.dataLayer.push({
+            event: 'quote_form_validation_error',
+            form_id: 'quoteForm',
+            form_type: 'quote_request'
+          });
+          return;
+        }
+
+        submitted = true;
+        button.disabled = true;
+        button.textContent = 'Request Submitted';
+        success.style.display = 'block';
+
+        window.dataLayer.push({
+          event: 'generate_lead',
+          form_id: 'quoteForm',
+          form_type: 'quote_request',
+          service_type: document.getElementById('service').value
+        });
+
+        window.dataLayer.push({
+          event: 'quote_form_success',
+          form_id: 'quoteForm',
+          form_type: 'quote_request'
+        });
+      });
+    })();
+  </script>
+</body>
+</html>
+```
