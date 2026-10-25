@@ -1,28 +1,96 @@
-<!doctype html>
+
+<!DOCTYPE html>
 <html lang="en">
 <head>
-<meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1">
-<meta name="description" content="Send a demo contact request. Data stays in this browser session.">
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
 <title>Contact Us | PureLiving</title>
-<!-- Google Tag Manager -->
-<script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
-new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
-j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
-'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
-})(window,document,'script','dataLayer','GTM-ML22WP84');</script>
-<!-- End Google Tag Manager -->
-<link rel="stylesheet" href="css/styles.css">
-<script defer src="js/app.js"></script>
-
+<meta name="description" content="Contact PureLiving for help choosing home and lifestyle essentials.">
+<script>
+window.dataLayer=window.dataLayer||[];
+(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src='https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);})(window,document,'script','dataLayer','GTM-ML22WP84');
+</script>
+<style>
+*{box-sizing:border-box}body{margin:0;font-family:Arial,sans-serif;color:#24352d;line-height:1.6}a{text-decoration:none;color:inherit}input,select,textarea,button{font:inherit}.top{background:#173e34;color:#fff;text-align:center;padding:8px;font-size:12px}.header{padding:16px 5%;display:flex;justify-content:space-between;align-items:center;gap:15px;flex-wrap:wrap;border-bottom:1px solid #e5e9e2}.logo{font-family:Georgia,serif;font-size:27px;font-weight:bold;color:#173e34}.logo span{color:#c99b51}.nav{display:flex;gap:20px;font-size:13px;font-weight:bold}.hero{background:#f5f3ec;padding:48px 22px;text-align:center}.eyebrow{font-size:11px;letter-spacing:2px;color:#9a7337;font-weight:bold}.hero h1{font-family:Georgia,serif;font-weight:normal;font-size:45px;margin:10px 0}.hero p{max-width:570px;margin:auto;color:#6c776e;font-size:14px}.wrap{max-width:1050px;margin:auto;padding:45px 22px 70px}.layout{display:grid;grid-template-columns:.8fr 1.2fr;gap:28px}.panel{border:1px solid #e5e9e2;padding:25px;border-radius:4px}.panel h2{font-family:Georgia,serif;font-size:25px;font-weight:normal;margin:0 0 15px}.muted{font-size:13px;color:#6c776e}.contact-item{padding:15px 0;border-bottom:1px solid #e5e9e2}.contact-item:last-child{border:0}.contact-item strong{display:block;font-size:13px}.contact-item p{font-size:13px;color:#6c776e;margin:5px 0}.form-grid{display:grid;grid-template-columns:1fr 1fr;gap:15px}.field{display:flex;flex-direction:column;gap:6px;font-size:12px;font-weight:bold}.field input,.field select,.field textarea{width:100%;border:1px solid #dfe3dc;border-radius:3px;padding:11px;outline-color:#173e34;background:white}.field textarea{min-height:125px;resize:vertical}.full{grid-column:1/-1}.btn{display:inline-block;border:1px solid #173e34;background:#173e34;color:white;padding:13px 19px;font-size:13px;font-weight:bold;border-radius:3px;cursor:pointer}.btn:hover{background:#28584a}.message{font-size:13px;color:#28584a;margin-top:12px}.notice{background:#f5f4ed;padding:12px;font-size:12px;color:#6c776e;margin:18px 0}.footer{background:#f4f3ed;padding:25px 5%;font-size:12px;color:#69736b}@media(max-width:750px){.layout{grid-template-columns:1fr}.wrap{padding:28px 15px 45px}.hero h1{font-size:36px}.form-grid{grid-template-columns:1fr}.full{grid-column:auto}.nav{gap:12px;flex-wrap:wrap}}
+</style>
 </head>
 <body>
-<!-- Google Tag Manager (noscript) -->
-<noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-ML22WP84"
-height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
-<!-- End Google Tag Manager (noscript) -->
-<div id="site-header"></div>
+<noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-ML22WP84" height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+<div class="top">THOUGHTFUL ESSENTIALS FOR EVERYDAY LIVING · DEMO STORE</div>
+<header class="header">
+<a class="logo" href="index.html">Pure<span>Living</span></a>
+<nav class="nav"><a href="index.html">Home</a><a href="products.html">Shop</a><a href="resources.html">Resources</a><a href="cart.html">Bag</a></nav>
+</header>
+<section class="hero">
+<div class="eyebrow">WE'RE HERE TO HELP</div>
+<h1>Let's talk</h1>
+<p>Questions about our demo products? Send us a message. This form also lets you practise lead form tracking.</p>
+</section>
 <main class="wrap">
-<span class="eyebrow">We're here to help</span><h1>Contact PureLiving</h1><p>Submit a sample contact request to practice successful lead tracking.</p><form data-demo-form="contact_form"><label>Name<input name="name" required minlength="2"></label><label>Email<input name="email" type="email" required></label><label>Phone (optional)<input name="phone" type="tel" pattern="[0-9+() -]{7,20}" placeholder="+91 98765 43210"></label><label>How can we help?<textarea name="message" required minlength="8"></textarea></label><button>Send Demo Request</button><p class="form-status" aria-live="polite"></p></form><p><a data-phone href="tel:+911234567890">Call demo number</a> · <a data-email href="mailto:hello@example.com">Email demo contact</a></p>
+<div class="layout">
+<section class="panel">
+<h2>Contact information</h2>
+<p class="muted">Explore the available contact options below.</p>
+<div class="contact-item"><strong>☎ Phone</strong><p><a href="tel:+911234567890" data-track="phone_click">+91 12345 67890 (demo)</a></p></div>
+<div class="contact-item"><strong>✉ Email</strong><p><a href="mailto:hello@example.com" data-track="email_click">hello@example.com (demo)</a></p></div>
+<div class="contact-item"><strong>◷ Hours</strong><p>Monday–Friday · 9 AM–6 PM</p></div>
+<div class="contact-item"><strong>⌖ Location</strong><p>Demo business · India</p></div>
+<div class="notice">This is a practice website. Contact details are placeholders and no message is sent to a real business.</div>
+<p><a class="btn" href="quote.html">Request a product quote</a></p>
+<p><a href="appointment.html" style="font-size:13px;text-decoration:underline">Book a demo consultation →</a></p>
+</section>
+<section class="panel">
+<h2>Send us a message</h2>
+<p class="muted">Fields marked * are required.</p>
+<form id="contactForm">
+<div class="form-grid">
+<label class="field">Full name *<input name="name" required maxlength="80" autocomplete="name" placeholder="Your name"></label>
+<label class="field">Email address *<input name="email" type="email" required maxlength="120" autocomplete="email" placeholder="you@example.com"></label>
+<label class="field">Phone number<input name="phone" type="tel" pattern="[0-9+() -]{8,18}" maxlength="18" autocomplete="tel" placeholder="Optional"></label>
+<label class="field">Topic *<select name="topic" required><option value="">Choose a topic</option><option>Product information</option><option>Order question</option><option>Product comparison</option><option>General enquiry</option></select></label>
+<label class="field full">Message *<textarea name="message" required maxlength="1000" placeholder="How can we help?"></textarea></label>
+</div>
+<p class="muted">For privacy, do not enter passwords, payment details or other sensitive information.</p>
+<button class="btn" type="submit" id="submitBtn">Send message →</button>
+<p class="message" id="formMessage" role="status" aria-live="polite"></p>
+</form>
+</section>
+</div>
 </main>
-<div id="site-footer"></div>
-</body></html>
+<footer class="footer">© 2026 PureLiving Demo Store · <a href="index.html">Home</a> · <a href="products.html">Shop</a></footer>
+<script>
+(function(){
+const form=document.getElementById("contactForm");
+const message=document.getElementById("formMessage");
+const btn=document.getElementById("submitBtn");
+let submitted=false;
+function fire(event,data={}){window.dataLayer=window.dataLayer||[];window.dataLayer.push({...data,event,demo_mode:true})}
+form.addEventListener("focusin",function(e){
+if(!form.dataset.started){form.dataset.started="1";fire("form_start",{form_id:"contactForm",form_type:"contact"})}
+});
+form.addEventListener("invalid",function(e){
+fire("form_validation_error",{form_id:"contactForm",field_name:e.target.name||"unknown"});
+},true);
+form.addEventListener("submit",function(e){
+e.preventDefault();
+if(!form.reportValidity())return;
+if(submitted)return;
+submitted=true;
+btn.disabled=true;
+btn.textContent="Submitting…";
+fire("generate_lead",{form_id:"contactForm",form_type:"contact",lead_status:"success"});
+fire("form_submit_success",{form_id:"contactForm",form_type:"contact"});
+message.textContent="Thank you! Your demo message has been submitted successfully.";
+form.reset();
+btn.disabled=false;
+btn.textContent="Send message →";
+submitted=false;
+});
+document.addEventListener("click",function(e){
+const a=e.target.closest("[data-track]");
+if(a)fire(a.dataset.track,{link_text:a.textContent.trim(),link_url:a.href});
+});
+})();
+</script>
+</body>
+</html>
