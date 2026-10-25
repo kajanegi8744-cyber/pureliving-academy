@@ -1,28 +1,216 @@
-<!doctype html>
+
+<!DOCTYPE html>
 <html lang="en">
 <head>
-<meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1">
-<meta name="description" content="Download real PDF learning guides and sample data.">
-<title>Resource Library | PureLiving</title>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Resources & Guides | PureLiving</title>
+<meta name="description" content="Explore helpful wellness resources and downloadable guides.">
+
 <!-- Google Tag Manager -->
-<script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+<script>
+(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
 new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
 j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
-'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
-})(window,document,'script','dataLayer','GTM-ML22WP84');</script>
+'https://www.googletagmanager.com/gtm.js?id='+i+dl;
+f.parentNode.insertBefore(j,f);
+})(window,document,'script','dataLayer','GTM-ML22WP84');
+</script>
 <!-- End Google Tag Manager -->
-<link rel="stylesheet" href="css/styles.css">
-<script defer src="js/app.js"></script>
 
+<style>
+*{box-sizing:border-box}
+body{margin:0;font-family:Arial,sans-serif;background:#f6f8f3;color:#26382d}
+header{background:#fff;padding:18px 7%;display:flex;justify-content:space-between;align-items:center;gap:18px;flex-wrap:wrap;border-bottom:1px solid #e3e9e1}
+.brand{font-size:24px;font-weight:800;color:#245c43;text-decoration:none}
+nav{display:flex;gap:18px;flex-wrap:wrap}
+nav a{color:#35463b;text-decoration:none;font-size:14px}
+.hero{background:#e5eee3;padding:48px 7%;text-align:center}
+.eyebrow{color:#26734d;font-size:12px;font-weight:bold;letter-spacing:2px}
+h1{font-size:clamp(32px,5vw,48px);margin:14px 0}
+.hero p{max-width:650px;margin:auto;color:#58685c;line-height:1.7}
+main{max-width:1150px;margin:38px auto;padding:0 20px}
+.toolbar{display:flex;gap:12px;flex-wrap:wrap;justify-content:space-between;align-items:center;margin-bottom:22px}
+input,select{padding:12px;border:1px solid #ccd5cb;border-radius:9px;font:inherit;background:white}
+input{flex:1;min-width:200px}
+.grid{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:20px}
+.card{background:#fff;border:1px solid #e0e8df;border-radius:15px;padding:23px;display:flex;flex-direction:column;min-height:280px}
+.icon{font-size:34px}
+.tag{font-size:11px;font-weight:bold;letter-spacing:1px;color:#26734d;margin-top:16px}
+h2{font-size:20px;line-height:1.4}
+.card p{font-size:14px;color:#647166;line-height:1.7;flex:1}
+button,.download{display:inline-block;border:0;border-radius:30px;padding:12px 18px;background:#286443;color:#fff;font-weight:bold;text-decoration:none;text-align:center;cursor:pointer}
+button:hover,.download:hover{background:#1d5034}
+.status{font-size:13px;color:#26734d;margin-top:12px;display:none}
+.empty{display:none;background:white;padding:24px;border-radius:12px}
+footer{text-align:center;padding:30px;color:#6a766c;font-size:13px}
+@media(max-width:850px){.grid{grid-template-columns:repeat(2,minmax(0,1fr))}}
+@media(max-width:560px){.grid{grid-template-columns:1fr}header{padding:16px 5%}.hero{padding:38px 5%}}
+</style>
 </head>
 <body>
+
 <!-- Google Tag Manager (noscript) -->
 <noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-ML22WP84"
 height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
 <!-- End Google Tag Manager (noscript) -->
-<div id="site-header"></div>
-<main class="wrap">
-<span class="eyebrow">Learn and download</span><h1>Resource library</h1><p>Real downloadable learning files are included in this project. Downloads track the click/initiated download only.</p><div id="resource-list" class="cards"></div>
+
+<header>
+<a class="brand" href="index.html">PureLiving</a>
+<nav>
+<a href="index.html">Home</a>
+<a href="products.html">Shop</a>
+<a href="contact.html">Contact</a>
+<a href="appointment.html">Consultation</a>
+<a href="account.html">My Account</a>
+</nav>
+</header>
+
+<section class="hero">
+<div class="eyebrow">THE PURELIVING LIBRARY</div>
+<h1>Resources for Better Living</h1>
+<p>Explore practical guides and useful files. Search the library and download a resource to practise analytics event tracking.</p>
+</section>
+
+<main>
+<div class="toolbar">
+<input id="search" type="search" placeholder="Search resources..." aria-label="Search resources">
+<select id="category" aria-label="Filter by category">
+<option value="all">All categories</option>
+<option value="wellness">Wellness</option>
+<option value="fitness">Fitness</option>
+<option value="sleep">Sleep</option>
+<option value="data">Sample data</option>
+</select>
+</div>
+
+<div class="grid" id="resourceGrid">
+
+<article class="card" data-category="wellness" data-search="healthy living wellness guide pdf">
+<div class="icon">📗</div><div class="tag">WELLNESS GUIDE</div>
+<h2>Healthy Living Guide</h2>
+<p>A practical introduction to everyday healthy habits and routines.</p>
+<a class="download" href="downloads/healthy-living-guide.pdf" download data-file="healthy-living-guide.pdf" data-title="Healthy Living Guide">Download PDF</a>
+<div class="status"></div>
+</article>
+
+<article class="card" data-category="fitness" data-search="fitness exercise movement guide pdf">
+<div class="icon">🏃</div><div class="tag">FITNESS</div>
+<h2>Fitness Starter Guide</h2>
+<p>Explore a beginner-friendly approach to movement and exercise planning.</p>
+<a class="download" href="downloads/fitness-starter-guide.pdf" download data-file="fitness-starter-guide.pdf" data-title="Fitness Starter Guide">Download PDF</a>
+<div class="status"></div>
+</article>
+
+<article class="card" data-category="sleep" data-search="sleep relaxation rest guide pdf">
+<div class="icon">🌙</div><div class="tag">SLEEP & REST</div>
+<h2>Sleep & Relaxation Guide</h2>
+<p>Learn general habits that can support a consistent wind-down routine.</p>
+<a class="download" href="downloads/sleep-relaxation-guide.pdf" download data-file="sleep-relaxation-guide.pdf" data-title="Sleep & Relaxation Guide">Download PDF</a>
+<div class="status"></div>
+</article>
+
+<article class="card" data-category="wellness" data-search="meditation stress mindfulness guide pdf">
+<div class="icon">🧘</div><div class="tag">MINDFULNESS</div>
+<h2>Meditation Practice Guide</h2>
+<p>A simple resource for building a regular mindfulness practice.</p>
+<a class="download" href="downloads/meditation-practice-guide.pdf" download data-file="meditation-practice-guide.pdf" data-title="Meditation Practice Guide">Download PDF</a>
+<div class="status"></div>
+</article>
+
+<article class="card" data-category="data" data-search="product catalogue json sample data">
+<div class="icon">🗂️</div><div class="tag">SAMPLE DATA</div>
+<h2>Product Catalogue</h2>
+<p>A sample JSON file for practising file downloads and resource clicks.</p>
+<a class="download" href="downloads/demo-product-catalogue.json" download data-file="demo-product-catalogue.json" data-title="Product Catalogue">Download JSON</a>
+<div class="status"></div>
+</article>
+
+<article class="card" data-category="data" data-search="sample products csv spreadsheet data">
+<div class="icon">📊</div><div class="tag">SAMPLE DATA</div>
+<h2>Sample Products CSV</h2>
+<p>A sample CSV file that you can open in spreadsheet software.</p>
+<a class="download" href="downloads/sample-products.csv" download data-file="sample-products.csv" data-title="Sample Products CSV">Download CSV</a>
+<div class="status"></div>
+</article>
+
+</div>
+
+<div class="empty" id="empty">No matching resources found. Try another search or category.</div>
 </main>
-<div id="site-footer"></div>
-</body></html>
+
+<footer>© 2026 PureLiving Academy · Demo website for analytics practice</footer>
+
+<script>
+window.dataLayer = window.dataLayer || [];
+
+(function(){
+var search = document.getElementById('search');
+var category = document.getElementById('category');
+var cards = Array.from(document.querySelectorAll('.card'));
+var empty = document.getElementById('empty');
+
+function filterResources(){
+var term = search.value.trim().toLowerCase();
+var cat = category.value;
+var visible = 0;
+
+cards.forEach(function(card){
+var matchesText = (card.dataset.search + ' ' + card.innerText).toLowerCase().includes(term);
+var matchesCategory = cat === 'all' || card.dataset.category === cat;
+var show = matchesText && matchesCategory;
+card.style.display = show ? 'flex' : 'none';
+if(show) visible++;
+});
+
+empty.style.display = visible ? 'none' : 'block';
+
+window.dataLayer.push({
+event:'resource_filter',
+search_term:term || '(empty)',
+resource_category:cat,
+visible_resources:visible
+});
+}
+
+search.addEventListener('input',filterResources);
+category.addEventListener('change',filterResources);
+
+search.addEventListener('search',function(){
+window.dataLayer.push({
+event:'search',
+search_term:search.value.trim()
+});
+});
+
+document.querySelectorAll('.download').forEach(function(link){
+link.addEventListener('click',function(){
+var card = link.closest('.card');
+var fileName = link.dataset.file;
+var fileType = fileName.split('.').pop();
+
+window.dataLayer.push({
+event:'file_download',
+file_name:fileName,
+file_extension:fileType,
+link_text:link.innerText.trim(),
+resource_title:link.dataset.title,
+resource_category:card.dataset.category,
+link_url:link.href
+});
+
+window.dataLayer.push({
+event:'resource_download_click',
+resource_title:link.dataset.title,
+file_name:fileName
+});
+
+var status = card.querySelector('.status');
+status.textContent = 'Download requested: ' + fileName;
+status.style.display = 'block';
+});
+});
+})();
+</script>
+</body>
+</html>
