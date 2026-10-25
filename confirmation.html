@@ -1,28 +1,66 @@
-<!doctype html>
+
+<!DOCTYPE html>
 <html lang="en">
 <head>
-<meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1">
-<meta name="description" content="Your simulated order confirmation.">
-<title>Demo Order Confirmation | PureLiving</title>
-<!-- Google Tag Manager -->
-<script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
-new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
-j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
-'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
-})(window,document,'script','dataLayer','GTM-ML22WP84');</script>
-<!-- End Google Tag Manager -->
-<link rel="stylesheet" href="css/styles.css">
-<script defer src="js/app.js"></script>
-
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Order Confirmation | PureLiving</title>
+<meta name="description" content="Your PureLiving demo order confirmation.">
+<script>
+window.dataLayer=window.dataLayer||[];
+(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src='https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);})(window,document,'script','dataLayer','GTM-ML22WP84');
+</script>
+<style>
+*{box-sizing:border-box}body{margin:0;font-family:Arial,sans-serif;color:#24352d;line-height:1.6}a{text-decoration:none;color:inherit}.top{background:#173e34;color:white;text-align:center;padding:8px;font-size:12px}.header{padding:16px 5%;display:flex;justify-content:space-between;align-items:center;gap:15px;flex-wrap:wrap;border-bottom:1px solid #e5e9e2}.logo{font-family:Georgia,serif;font-size:27px;font-weight:bold;color:#173e34}.logo span{color:#c99b51}.nav{display:flex;gap:20px;font-size:13px;font-weight:bold}.wrap{max-width:760px;margin:50px auto;padding:0 22px 65px}.card{border:1px solid #e5e9e2;padding:35px;border-radius:5px;text-align:center}.check{width:70px;height:70px;display:flex;align-items:center;justify-content:center;background:#e8f0e7;color:#173e34;border-radius:50%;font-size:35px;margin:0 auto 22px}.eyebrow{font-size:11px;letter-spacing:2px;color:#9a7337;font-weight:bold}.card h1{font-family:Georgia,serif;font-size:42px;font-weight:normal;line-height:1.2;margin:10px 0}.muted{font-size:13px;color:#6c776e}.details{margin:25px auto;text-align:left;max-width:460px;background:#f7f6f0;padding:20px}.line{display:flex;justify-content:space-between;gap:12px;padding:9px 0;border-bottom:1px solid #e1e3da;font-size:13px}.line:last-child{border-bottom:0}.btn{display:inline-block;background:#173e34;color:white;padding:13px 20px;border-radius:3px;font-size:13px;font-weight:bold;margin:8px}.alt{border:1px solid #173e34;background:white;color:#173e34}.notice{font-size:12px;background:#f7f6f0;padding:12px;margin-top:20px;color:#6c776e}.footer{background:#f4f3ed;padding:25px 5%;font-size:12px;color:#69736b}@media(max-width:600px){.wrap{margin:25px auto;padding:0 14px 40px}.card{padding:25px 16px}.card h1{font-size:34px}.nav{gap:12px;flex-wrap:wrap}}
+</style>
 </head>
 <body>
-<!-- Google Tag Manager (noscript) -->
-<noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-ML22WP84"
-height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
-<!-- End Google Tag Manager (noscript) -->
-<div id="site-header"></div>
+<noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-ML22WP84" height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+<div class="top">THOUGHTFUL ESSENTIALS FOR EVERYDAY LIVING · DEMO STORE</div>
+<header class="header">
+<a class="logo" href="index.html">Pure<span>Living</span></a>
+<nav class="nav"><a href="index.html">Home</a><a href="products.html">Shop</a><a href="resources.html">Resources</a></nav>
+</header>
 <main class="wrap">
-<span class="eyebrow">Order status</span><h1>Thank you for trying the demo.</h1><div id="confirmation-content"></div>
+<section class="card">
+<div class="check">✓</div>
+<div class="eyebrow">ORDER CONFIRMATION</div>
+<h1 id="heading">Thank you!</h1>
+<p id="message">Your demo order has been recorded in this browser.</p>
+<div class="details">
+<div class="line"><span>Demo transaction ID</span><strong id="transaction">—</strong></div>
+<div class="line"><span>Order total</span><strong id="total">₹0</strong></div>
+<div class="line"><span>Order status</span><strong>Demo only</strong></div>
+<div id="orderItems"></div>
+</div>
+<p class="muted">This is a practice website. No payment was taken and no real order was sent to a store.</p>
+<a class="btn" href="products.html">Continue shopping</a>
+<a class="btn alt" href="index.html">Back to home</a>
+<div class="notice">For your tracking practice: the purchase event should be sent only once when a demo order is successfully created. Refreshing this page should not create another purchase.</div>
+</section>
 </main>
-<div id="site-footer"></div>
-</body></html>
+<footer class="footer">© 2026 PureLiving Demo Store · Practice environment only</footer>
+<script>
+(function(){
+const $=s=>document.querySelector(s);
+const money=n=>"₹"+Number(n).toLocaleString("en-IN");
+let order=null;
+try{order=JSON.parse(sessionStorage.getItem("pl_last_order")||"null")}catch(e){}
+const query=new URLSearchParams(location.search);
+const requestedId=query.get("order");
+if(!order){
+$("#heading").textContent="No recent demo order";
+$("#message").textContent="There is no order saved in this browser session. Complete the demo checkout first.";
+$("#transaction").textContent="Not available";
+$("#total").textContent="₹0";
+}else{
+$("#transaction").textContent=order.id||requestedId||"Demo order";
+$("#total").textContent=money(order.total||0);
+$("#orderItems").innerHTML=(order.items||[]).map(item=>'<div class="line"><span>'+String(item.id||"Demo product")+' × '+Number(item.qty||1)+'</span><strong>'+money(Number(item.price||0)*Number(item.qty||1))+'</strong></div>').join("");
+}
+window.dataLayer=window.dataLayer||[];
+window.dataLayer.push({event:"demo_confirmation_view",demo_mode:true,transaction_id:order&&order.id?order.id:undefined,value:order&&order.total?order.total:0});
+})();
+</script>
+</body>
+</html>
