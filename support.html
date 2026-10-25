@@ -5,7 +5,6 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>Customer Support | PureLiving</title>
-<meta name="description" content="Contact PureLiving demo customer support.">
 
 <!-- Google Tag Manager -->
 <script>
@@ -21,39 +20,27 @@ f.parentNode.insertBefore(j,f);
 <style>
 *{box-sizing:border-box}
 body{margin:0;font-family:Arial,sans-serif;background:#f5f8f3;color:#24382c}
-header{padding:18px 6%;background:#fff;border-bottom:1px solid #e1e8df;display:flex;justify-content:space-between;align-items:center;gap:15px;flex-wrap:wrap}
+header{padding:18px 6%;background:#fff;display:flex;justify-content:space-between;align-items:center;gap:15px;flex-wrap:wrap}
 .brand{font-size:24px;font-weight:800;color:#245c43;text-decoration:none}
 nav{display:flex;gap:16px;flex-wrap:wrap}
-nav a{color:#35463b;text-decoration:none;font-size:14px}
-.hero{background:#e4eee2;padding:45px 20px;text-align:center}
-.hero h1{font-size:clamp(30px,5vw,44px);margin:0 0 12px}
-.hero p{max-width:650px;margin:auto;color:#56675a;line-height:1.7}
-main{max-width:1050px;margin:38px auto;padding:0 20px;display:grid;grid-template-columns:.85fr 1.15fr;gap:25px;align-items:start}
+nav a{color:#35463b;text-decoration:none}
+.hero{background:#e4eee2;padding:40px 20px;text-align:center}
+.hero h1{font-size:38px;margin:0 0 10px}
+.hero p{color:#56675a;line-height:1.7}
+main{max-width:800px;margin:35px auto;padding:0 20px}
 .card{background:#fff;border:1px solid #e0e8df;border-radius:16px;padding:28px}
-h2{margin-top:0}
-.info p{color:#617064;line-height:1.8}
-.item{padding:13px 0;border-bottom:1px solid #edf0eb}
 label{display:block;font-size:14px;font-weight:bold;margin:17px 0 8px}
-input,select,textarea{width:100%;padding:13px;border:1px solid #ccd7cc;border-radius:8px;font:inherit;background:#fff}
-input:focus,select:focus,textarea:focus{outline:2px solid #a8cfb1;border-color:#397c52}
+input,select,textarea{width:100%;padding:13px;border:1px solid #ccd7cc;border-radius:8px;font:inherit}
 textarea{min-height:120px;resize:vertical}
-button{width:100%;padding:14px;margin-top:20px;border:0;border-radius:30px;background:#286443;color:#fff;font-size:16px;font-weight:bold;cursor:pointer}
-button:hover{background:#1d5034}
-button:disabled{opacity:.65;cursor:not-allowed}
-.message{display:none;margin-top:18px;padding:15px;border-radius:10px;line-height:1.6}
-.success{background:#e4f5e9;color:#17613a}
-.error{background:#ffeded;color:#9a2525}
+button{width:100%;padding:14px;margin-top:20px;border:0;border-radius:30px;background:#286443;color:white;font-size:16px;font-weight:bold;cursor:pointer}
+button:disabled{opacity:.65}
 .note{font-size:12px;color:#6b786e;line-height:1.7}
-footer{text-align:center;padding:28px;color:#6a766c;font-size:13px}
-@media(max-width:720px){main{grid-template-columns:1fr}header{padding:16px 5%}}
+footer{text-align:center;padding:25px;color:#6a766c;font-size:13px}
 </style>
 </head>
-<body>
 
-<!-- Google Tag Manager (noscript) -->
-<noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-ML22WP84"
-height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
-<!-- End Google Tag Manager (noscript) -->
+<body>
+<noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-ML22WP84" height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
 
 <header>
 <a class="brand" href="index.html">PureLiving</a>
@@ -62,32 +49,21 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
 <a href="products.html">Shop</a>
 <a href="resources.html">Resources</a>
 <a href="contact.html">Contact</a>
-<a href="account.html">My Account</a>
 </nav>
 </header>
 
 <section class="hero">
-<h1>How Can We Help?</h1>
-<p>Send a demo support request to practise customer-service form tracking.</p>
+<h1>Customer Support</h1>
+<p>Tell us about your issue using this demo support form.</p>
 </section>
 
 <main>
-<section class="card info">
-<h2>Customer Support</h2>
-<p>Choose a topic and describe the issue. This page simulates a support request for analytics learning.</p>
-<div class="item">✓ Product information</div>
-<div class="item">✓ Order and checkout questions</div>
-<div class="item">✓ Website and account assistance</div>
-<div class="item">✓ General enquiries</div>
-<p class="note">Demo only: requests are not sent to a real support team.</p>
-</section>
-
 <section class="card">
 <h2>Submit a support request</h2>
 
 <form id="supportForm">
 <label for="topic">Support topic *</label>
-<select id="topic" name="support_topic" required>
+<select id="topic" required>
 <option value="">Select a topic</option>
 <option value="product">Product information</option>
 <option value="order">Order or checkout</option>
@@ -97,32 +73,25 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
 </select>
 
 <label for="priority">Priority *</label>
-<select id="priority" name="priority" required>
+<select id="priority" required>
 <option value="">Select priority</option>
 <option value="normal">Normal</option>
 <option value="high">High</option>
 </select>
 
 <label for="name">Your name *</label>
-<input id="name" name="name" type="text" autocomplete="off" required>
+<input id="name" type="text" required autocomplete="off">
 
 <label for="email">Email address *</label>
-<input id="email" name="email" type="email" autocomplete="off" required>
+<input id="email" type="email" required autocomplete="off">
 
-<label for="message">Describe your issue *</label>
-<textarea id="message" name="message" required minlength="10" placeholder="Describe the issue (at least 10 characters)..."></textarea>
+<label for="issue">Describe your issue *</label>
+<textarea id="issue" required minlength="10" placeholder="Write your issue here..."></textarea>
 
-<button id="submitButton" type="submit">Submit Support Request</button>
+<button type="submit" id="submitButton">Submit Support Request</button>
 </form>
 
-<div id="success" class="message success" role="status">
-<strong>Support request submitted!</strong>
-<p>Your demo request was completed on this page. It was not sent to a real support team.</p>
-<a href="index.html">Return to Home</a>
-</div>
-<div id="error" class="message error" role="alert"></div>
-
-<p class="note">Use dummy details only. Do not enter passwords, payment details, or sensitive personal information.</p>
+<p class="note">Demo only: your request is not sent to a real support team. Use dummy details only.</p>
 </section>
 </main>
 
@@ -131,57 +100,46 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
 <script>
 (function(){
 window.dataLayer=window.dataLayer||[];
-
 var form=document.getElementById('supportForm');
 var button=document.getElementById('submitButton');
-var success=document.getElementById('success');
-var error=document.getElementById('error');
 var started=false;
 var submitted=false;
 
 form.addEventListener('focusin',function(){
-  if(!started){
-    started=true;
-    window.dataLayer.push({
-      event:'support_form_start',
-      form_id:'supportForm',
-      form_type:'support_request'
-    });
-  }
+if(!started){
+started=true;
+window.dataLayer.push({
+event:'support_form_start',
+form_id:'supportForm',
+form_type:'support_request'
+});
+}
 });
 
 form.addEventListener('submit',function(e){
-  e.preventDefault();
-  error.style.display='none';
+e.preventDefault();
 
-  if(submitted)return;
+if(submitted)return;
 
-  if(!form.checkValidity()){
-    form.reportValidity();
-    error.textContent='Please complete all required fields correctly.';
-    error.style.display='block';
-    window.dataLayer.push({
-      event:'support_form_validation_error',
-      form_id:'supportForm'
-    });
-    return;
-  }
+if(!form.checkValidity()){
+form.reportValidity();
+return;
+}
 
-  submitted=true;
-  button.disabled=true;
-  button.textContent='Request Submitted';
-  success.style.display='block';
-  success.scrollIntoView({behavior:'smooth',block:'center'});
+submitted=true;
+button.disabled=true;
+button.textContent='Opening confirmation...';
 
-  window.dataLayer.push({
-    event:'support_request',
-    form_id:'supportForm',
-    support_topic:document.getElementById('topic').value,
-    priority:document.getElementById('priority').value
-  });
+window.dataLayer.push({
+event:'support_request',
+form_id:'supportForm',
+support_topic:document.getElementById('topic').value,
+priority:document.getElementById('priority').value
+});
+
+window.location.assign('https://kajanegi8744-cyber.github.io/pureliving-academy/support-success.html');
 });
 })();
 </script>
-
 </body>
 </html>
