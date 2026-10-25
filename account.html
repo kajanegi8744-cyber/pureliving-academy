@@ -1,228 +1,150 @@
-```html
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>My Account | PureLiving</title>
-  <meta name="description" content="PureLiving demo account page for signup and login practice.">
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Signup / Login Practice | PureLiving</title>
 
-  <!-- Google Tag Manager -->
-  <script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
-  new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
-  j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
-  'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
-  })(window,document,'script','dataLayer','GTM-ML22WP84');</script>
-  <!-- End Google Tag Manager -->
+<!-- Google Tag Manager -->
+<script>
+(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+'https://www.googletagmanager.com/gtm.js?id='+i+dl;
+f.parentNode.insertBefore(j,f);
+})(window,document,'script','dataLayer','GTM-ML22WP84');
+</script>
+<!-- End Google Tag Manager -->
 
-  <style>
-    *{box-sizing:border-box}
-    body{margin:0;font-family:Arial,sans-serif;background:#f5f7f2;color:#26382d}
-    header{background:#fff;padding:18px 7%;display:flex;justify-content:space-between;align-items:center;gap:18px;flex-wrap:wrap;border-bottom:1px solid #e3e9e1}
-    .brand{font-size:24px;font-weight:800;color:#245c43;text-decoration:none}
-    nav{display:flex;gap:18px;flex-wrap:wrap}
-    nav a{color:#35463b;text-decoration:none;font-size:14px}
-    nav a:hover{color:#26734d}
-    .hero{text-align:center;background:#e5eee3;padding:38px 20px}
-    .hero h1{font-size:34px;margin:0 0 10px}
-    .hero p{color:#56665a;line-height:1.6;margin:0}
-    main{max-width:1050px;margin:38px auto;padding:0 20px;display:grid;grid-template-columns:1fr 1fr;gap:25px;align-items:start}
-    .card{background:#fff;padding:28px;border-radius:16px;box-shadow:0 8px 30px #233b2c0d}
-    h2{margin-top:0}
-    .description{color:#637066;line-height:1.7;font-size:14px}
-    label{display:block;font-size:14px;font-weight:700;margin:17px 0 7px}
-    input{width:100%;padding:12px;border:1px solid #ccd5cb;border-radius:8px;font:inherit}
-    input:focus{outline:2px solid #a8cfb1;border-color:#397c52}
-    button{width:100%;padding:13px;margin-top:20px;border:0;border-radius:9px;background:#286443;color:#fff;font-size:15px;font-weight:700;cursor:pointer}
-    button:hover{background:#1d5034}
-    button:disabled{opacity:.6;cursor:not-allowed}
-    .switch{margin-top:16px;font-size:14px;color:#59675c}
-    .switch button{width:auto;margin:0 0 0 5px;padding:0;background:none;color:#286443;text-decoration:underline;font-size:14px}
-    .message{display:none;margin-top:16px;padding:14px;border-radius:8px;line-height:1.6;font-size:14px}
-    .success{background:#e5f5e8;color:#205b34}
-    .error{background:#fdeaea;color:#962f2f}
-    .notice{max-width:850px;margin:0 auto 30px;padding:0 20px;color:#657267;font-size:12px;line-height:1.7;text-align:center}
-    footer{text-align:center;padding:25px;color:#6a766c;font-size:13px}
-    @media(max-width:700px){main{grid-template-columns:1fr}.hero h1{font-size:28px}header{padding:16px 5%}}
-  </style>
+<style>
+*{box-sizing:border-box}
+body{margin:0;padding:35px 20px;background:#f5f8f5;color:#193b32;font-family:Arial,sans-serif}
+main{max-width:1050px;margin:auto}
+.eyebrow{font-size:12px;letter-spacing:2px;font-weight:bold;color:#18705d}
+h1{font-size:clamp(32px,5vw,52px);margin:18px 0}
+.forms{display:grid;grid-template-columns:1fr 1fr;gap:18px}
+.card{background:white;border:1px solid #dce8e0;border-radius:18px;padding:25px}
+h2{font-size:22px;margin-top:15px}
+label{display:block;font-size:14px;font-weight:bold;margin:18px 0 8px}
+input{width:100%;padding:14px;border:1px solid #cedbd3;border-radius:10px;font-size:15px}
+button{border:0;border-radius:30px;background:#197360;color:white;font-weight:bold;font-size:15px;padding:12px 24px;margin-top:20px;cursor:pointer}
+button:disabled{opacity:.65;cursor:default}
+.message{display:none;margin-top:18px;padding:14px;border-radius:10px;line-height:1.5}
+.success{background:#e4f5e9;color:#17613a}
+.error{background:#ffeded;color:#9a2525}
+.notice{margin-top:18px;background:#fff4d9;border:1px solid #f0dfaa;border-radius:12px;padding:16px;color:#755626;line-height:1.5}
+@media(max-width:700px){.forms{grid-template-columns:1fr}body{padding:22px 14px}}
+</style>
 </head>
 <body>
-  <!-- Google Tag Manager (noscript) -->
-  <noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-ML22WP84"
-  height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
-  <!-- End Google Tag Manager (noscript) -->
 
-  <header>
-    <a class="brand" href="index.html">PureLiving</a>
-    <nav>
-      <a href="index.html">Home</a>
-      <a href="products.html">Shop</a>
-      <a href="cart.html">Cart</a>
-      <a href="contact.html">Contact</a>
-    </nav>
-  </header>
+<!-- Google Tag Manager (noscript) -->
+<noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-ML22WP84"
+height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+<!-- End Google Tag Manager (noscript) -->
 
-  <section class="hero">
-    <h1>Welcome to PureLiving</h1>
-    <p>Create a demo account or practise the login journey.</p>
-  </section>
+<main>
+  <div class="eyebrow">ACCOUNT DEMO</div>
+  <h1>Signup / Login Practice</h1>
 
-  <main>
-    <section class="card" id="signupCard">
-      <h2>Create an account</h2>
-      <p class="description">Join PureLiving to explore your demo customer experience.</p>
-
+  <div class="forms">
+    <section class="card">
+      <h2>Create demo account</h2>
       <form id="signupForm">
-        <label for="signupName">Full name *</label>
-        <input id="signupName" name="full_name" type="text" autocomplete="name" required>
+        <label for="signupName">Name</label>
+        <input id="signupName" type="text" autocomplete="off" required>
 
-        <label for="signupEmail">Email address *</label>
-        <input id="signupEmail" name="email" type="email" autocomplete="email" required>
+        <label for="signupEmail">Email</label>
+        <input id="signupEmail" type="email" autocomplete="off" required>
 
-        <label for="signupPassword">Create password *</label>
-        <input id="signupPassword" name="password" type="password" autocomplete="new-password" minlength="8" required>
+        <label for="signupPassword">Password (demo only)</label>
+        <input id="signupPassword" type="password" autocomplete="new-password" minlength="8" required>
 
-        <button type="submit" id="signupButton">Create Demo Account</button>
-        <div id="signupMessage" class="message success" role="status"></div>
-        <div id="signupError" class="message error" role="alert"></div>
+        <button type="submit" id="signupButton">Sign Up</button>
       </form>
-
-      <p class="switch">Already have an account? <button type="button" id="showLogin">Go to login</button></p>
+      <div id="signupSuccess" class="message success" role="status"></div>
+      <div id="signupError" class="message error" role="alert"></div>
     </section>
 
-    <section class="card" id="loginCard">
-      <h2>Login</h2>
-      <p class="description">Practise the login form and track a successful demo login.</p>
-
+    <section class="card">
+      <h2>Login demo</h2>
       <form id="loginForm">
-        <label for="loginEmail">Email address *</label>
-        <input id="loginEmail" name="email" type="email" autocomplete="username" required>
+        <label for="loginEmail">Email</label>
+        <input id="loginEmail" type="email" autocomplete="off" required>
 
-        <label for="loginPassword">Password *</label>
-        <input id="loginPassword" name="password" type="password" autocomplete="current-password" required>
+        <label for="loginPassword">Password</label>
+        <input id="loginPassword" type="password" autocomplete="off" required>
 
-        <button type="submit" id="loginButton">Login to Demo</button>
-        <div id="loginMessage" class="message success" role="status"></div>
-        <div id="loginError" class="message error" role="alert"></div>
+        <button type="submit" id="loginButton">Login</button>
       </form>
-
-      <p class="switch">New to PureLiving? <button type="button" id="showSignup">Create an account</button></p>
+      <div id="loginSuccess" class="message success" role="status"></div>
+      <div id="loginError" class="message error" role="alert"></div>
     </section>
-  </main>
+  </div>
 
-  <p class="notice">
-    Demo only: no real account is created and no credentials are sent to a server.
-    Do not enter a real password or sensitive personal information. Successful form submissions are simulated for analytics practice.
-  </p>
+  <div class="notice">
+    Demo only: no real account is created, no authentication takes place,
+    and no credentials are sent to a server. Never enter your real password.
+  </div>
+</main>
 
-  <footer>© 2026 PureLiving Academy · Demo website for analytics practice</footer>
+<script>
+(function(){
+  window.dataLayer = window.dataLayer || [];
 
-  <script>
-    window.dataLayer = window.dataLayer || [];
+  function setupForm(formId, buttonId, successId, errorId, eventName, message){
+    var form = document.getElementById(formId);
+    var button = document.getElementById(buttonId);
+    var success = document.getElementById(successId);
+    var error = document.getElementById(errorId);
+    var submitted = false;
 
-    (function () {
-      var signupForm = document.getElementById('signupForm');
-      var loginForm = document.getElementById('loginForm');
-      var signupSubmitted = false;
-      var loginSubmitted = false;
-      var signupStarted = false;
-      var loginStarted = false;
+    form.addEventListener('submit', function(e){
+      e.preventDefault();
+      e.stopPropagation();
 
-      function trackFormStart(formType) {
+      if(submitted) return;
+
+      success.style.display = 'none';
+      error.style.display = 'none';
+
+      if(!form.checkValidity()){
+        form.reportValidity();
+        error.textContent = 'Please complete all required fields correctly.';
+        error.style.display = 'block';
         window.dataLayer.push({
-          event: 'account_form_start',
-          form_type: formType
+          event: 'account_form_validation_error',
+          form_type: eventName
         });
+        return;
       }
 
-      signupForm.addEventListener('focusin', function () {
-        if (!signupStarted) {
-          signupStarted = true;
-          trackFormStart('sign_up');
-        }
+      submitted = true;
+      button.disabled = true;
+      button.textContent = 'Successful';
+
+      success.textContent = message;
+      success.style.display = 'block';
+
+      window.dataLayer.push({
+        event: eventName,
+        method: 'demo_form'
       });
+    });
+  }
 
-      loginForm.addEventListener('focusin', function () {
-        if (!loginStarted) {
-          loginStarted = true;
-          trackFormStart('login');
-        }
-      });
+  setupForm(
+    'signupForm','signupButton','signupSuccess','signupError',
+    'sign_up','Demo signup successful! No account or password was saved.'
+  );
 
-      signupForm.addEventListener('submit', function (event) {
-        event.preventDefault();
+  setupForm(
+    'loginForm','loginButton','loginSuccess','loginError',
+    'login','Demo login successful! No real authentication was performed.'
+  );
+})();
+</script>
 
-        var message = document.getElementById('signupMessage');
-        var error = document.getElementById('signupError');
-        var button = document.getElementById('signupButton');
-
-        message.style.display = 'none';
-        error.style.display = 'none';
-
-        if (signupSubmitted) return;
-
-        if (!signupForm.checkValidity()) {
-          signupForm.reportValidity();
-          window.dataLayer.push({
-            event: 'account_form_validation_error',
-            form_type: 'sign_up'
-          });
-          return;
-        }
-
-        signupSubmitted = true;
-        button.disabled = true;
-        button.textContent = 'Demo Account Created';
-
-        message.textContent = 'Demo signup successful! No account or password has been saved.';
-        message.style.display = 'block';
-
-        window.dataLayer.push({
-          event: 'sign_up',
-          method: 'demo_form'
-        });
-      });
-
-      loginForm.addEventListener('submit', function (event) {
-        event.preventDefault();
-
-        var message = document.getElementById('loginMessage');
-        var error = document.getElementById('loginError');
-        var button = document.getElementById('loginButton');
-
-        message.style.display = 'none';
-        error.style.display = 'none';
-
-        if (loginSubmitted) return;
-
-        if (!loginForm.checkValidity()) {
-          loginForm.reportValidity();
-          window.dataLayer.push({
-            event: 'account_form_validation_error',
-            form_type: 'login'
-          });
-          return;
-        }
-
-        loginSubmitted = true;
-        button.disabled = true;
-        button.textContent = 'Demo Login Successful';
-
-        message.textContent = 'Demo login successful! No real authentication was performed.';
-        message.style.display = 'block';
-
-        window.dataLayer.push({
-          event: 'login',
-          method: 'demo_form'
-        });
-      });
-
-      document.getElementById('showLogin').addEventListener('click', function () {
-        document.getElementById('loginCard').scrollIntoView({behavior:'smooth',block:'center'});
-      });
-
-      document.getElementById('showSignup').addEventListener('click', function () {
-        document.getElementById('signupCard').scrollIntoView({behavior:'smooth',block:'center'});
-      });
-    })();
-  </script
+</body>
+</html>
