@@ -1,28 +1,187 @@
-<!doctype html>
+
+<!DOCTYPE html>
 <html lang="en">
 <head>
-<meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1">
-<meta name="description" content="Answers about this training demo.">
-<title>Support & FAQ | PureLiving</title>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Customer Support | PureLiving</title>
+<meta name="description" content="Contact PureLiving demo customer support.">
+
 <!-- Google Tag Manager -->
-<script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+<script>
+(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
 new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
 j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
-'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
-})(window,document,'script','dataLayer','GTM-ML22WP84');</script>
+'https://www.googletagmanager.com/gtm.js?id='+i+dl;
+f.parentNode.insertBefore(j,f);
+})(window,document,'script','dataLayer','GTM-ML22WP84');
+</script>
 <!-- End Google Tag Manager -->
-<link rel="stylesheet" href="css/styles.css">
-<script defer src="js/app.js"></script>
 
+<style>
+*{box-sizing:border-box}
+body{margin:0;font-family:Arial,sans-serif;background:#f5f8f3;color:#24382c}
+header{padding:18px 6%;background:#fff;border-bottom:1px solid #e1e8df;display:flex;justify-content:space-between;align-items:center;gap:15px;flex-wrap:wrap}
+.brand{font-size:24px;font-weight:800;color:#245c43;text-decoration:none}
+nav{display:flex;gap:16px;flex-wrap:wrap}
+nav a{color:#35463b;text-decoration:none;font-size:14px}
+.hero{background:#e4eee2;padding:45px 20px;text-align:center}
+.hero h1{font-size:clamp(30px,5vw,44px);margin:0 0 12px}
+.hero p{max-width:650px;margin:auto;color:#56675a;line-height:1.7}
+main{max-width:1050px;margin:38px auto;padding:0 20px;display:grid;grid-template-columns:.85fr 1.15fr;gap:25px;align-items:start}
+.card{background:#fff;border:1px solid #e0e8df;border-radius:16px;padding:28px}
+h2{margin-top:0}
+.info p{color:#617064;line-height:1.8}
+.item{padding:13px 0;border-bottom:1px solid #edf0eb}
+label{display:block;font-size:14px;font-weight:bold;margin:17px 0 8px}
+input,select,textarea{width:100%;padding:13px;border:1px solid #ccd7cc;border-radius:8px;font:inherit;background:#fff}
+input:focus,select:focus,textarea:focus{outline:2px solid #a8cfb1;border-color:#397c52}
+textarea{min-height:120px;resize:vertical}
+button{width:100%;padding:14px;margin-top:20px;border:0;border-radius:30px;background:#286443;color:#fff;font-size:16px;font-weight:bold;cursor:pointer}
+button:hover{background:#1d5034}
+button:disabled{opacity:.65;cursor:not-allowed}
+.message{display:none;margin-top:18px;padding:15px;border-radius:10px;line-height:1.6}
+.success{background:#e4f5e9;color:#17613a}
+.error{background:#ffeded;color:#9a2525}
+.note{font-size:12px;color:#6b786e;line-height:1.7}
+footer{text-align:center;padding:28px;color:#6a766c;font-size:13px}
+@media(max-width:720px){main{grid-template-columns:1fr}header{padding:16px 5%}}
+</style>
 </head>
 <body>
+
 <!-- Google Tag Manager (noscript) -->
 <noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-ML22WP84"
 height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
 <!-- End Google Tag Manager (noscript) -->
-<div id="site-header"></div>
-<main class="wrap">
-<span class="eyebrow">Help center</span><h1>Support & FAQ</h1><div class="faq"><details data-faq><summary>Is this a real online store?</summary><p>No. Products, prices, cart, orders and forms are for learning only.</p></details><details data-faq><summary>Will checkout charge my card?</summary><p>No payment gateway is connected. Do not enter real payment details.</p></details><details data-faq><summary>Does installing GTM mean GA4 is configured?</summary><p>No. The container snippet loads GTM; tags, triggers, variables, account linking and consent settings must be configured separately.</p></details><details data-faq><summary>Does a download event prove someone read the file?</summary><p>No. It tracks a download click/initiated download, not confirmed file consumption.</p></details><details data-faq><summary>Where are demo form submissions sent?</summary><p>They are not sent to a server. The form displays local success feedback and pushes a demo event to the browser dataLayer.</p></details></div>
+
+<header>
+<a class="brand" href="index.html">PureLiving</a>
+<nav>
+<a href="index.html">Home</a>
+<a href="products.html">Shop</a>
+<a href="resources.html">Resources</a>
+<a href="contact.html">Contact</a>
+<a href="account.html">My Account</a>
+</nav>
+</header>
+
+<section class="hero">
+<h1>How Can We Help?</h1>
+<p>Send a demo support request to practise customer-service form tracking.</p>
+</section>
+
+<main>
+<section class="card info">
+<h2>Customer Support</h2>
+<p>Choose a topic and describe the issue. This page simulates a support request for analytics learning.</p>
+<div class="item">✓ Product information</div>
+<div class="item">✓ Order and checkout questions</div>
+<div class="item">✓ Website and account assistance</div>
+<div class="item">✓ General enquiries</div>
+<p class="note">Demo only: requests are not sent to a real support team.</p>
+</section>
+
+<section class="card">
+<h2>Submit a support request</h2>
+
+<form id="supportForm">
+<label for="topic">Support topic *</label>
+<select id="topic" name="support_topic" required>
+<option value="">Select a topic</option>
+<option value="product">Product information</option>
+<option value="order">Order or checkout</option>
+<option value="account">Account assistance</option>
+<option value="website">Website issue</option>
+<option value="other">Other enquiry</option>
+</select>
+
+<label for="priority">Priority *</label>
+<select id="priority" name="priority" required>
+<option value="">Select priority</option>
+<option value="normal">Normal</option>
+<option value="high">High</option>
+</select>
+
+<label for="name">Your name *</label>
+<input id="name" name="name" type="text" autocomplete="off" required>
+
+<label for="email">Email address *</label>
+<input id="email" name="email" type="email" autocomplete="off" required>
+
+<label for="message">Describe your issue *</label>
+<textarea id="message" name="message" required minlength="10" placeholder="Describe the issue (at least 10 characters)..."></textarea>
+
+<button id="submitButton" type="submit">Submit Support Request</button>
+</form>
+
+<div id="success" class="message success" role="status">
+<strong>Support request submitted!</strong>
+<p>Your demo request was completed on this page. It was not sent to a real support team.</p>
+<a href="index.html">Return to Home</a>
+</div>
+<div id="error" class="message error" role="alert"></div>
+
+<p class="note">Use dummy details only. Do not enter passwords, payment details, or sensitive personal information.</p>
+</section>
 </main>
-<div id="site-footer"></div>
-</body></html>
+
+<footer>© 2026 PureLiving Academy · Demo website for analytics practice</footer>
+
+<script>
+(function(){
+window.dataLayer=window.dataLayer||[];
+
+var form=document.getElementById('supportForm');
+var button=document.getElementById('submitButton');
+var success=document.getElementById('success');
+var error=document.getElementById('error');
+var started=false;
+var submitted=false;
+
+form.addEventListener('focusin',function(){
+  if(!started){
+    started=true;
+    window.dataLayer.push({
+      event:'support_form_start',
+      form_id:'supportForm',
+      form_type:'support_request'
+    });
+  }
+});
+
+form.addEventListener('submit',function(e){
+  e.preventDefault();
+  error.style.display='none';
+
+  if(submitted)return;
+
+  if(!form.checkValidity()){
+    form.reportValidity();
+    error.textContent='Please complete all required fields correctly.';
+    error.style.display='block';
+    window.dataLayer.push({
+      event:'support_form_validation_error',
+      form_id:'supportForm'
+    });
+    return;
+  }
+
+  submitted=true;
+  button.disabled=true;
+  button.textContent='Request Submitted';
+  success.style.display='block';
+  success.scrollIntoView({behavior:'smooth',block:'center'});
+
+  window.dataLayer.push({
+    event:'support_request',
+    form_id:'supportForm',
+    support_topic:document.getElementById('topic').value,
+    priority:document.getElementById('priority').value
+  });
+});
+})();
+</script>
+
+</body>
+</html>
