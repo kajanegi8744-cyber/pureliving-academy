@@ -3,8 +3,9 @@
 <html lang="en">
 <head>
 <meta charset="UTF-8">
-<meta name="viewport" content="width=device-width,initial-scale=1">
+<meta name="viewport" content="width=device-width, initial-scale=1">
 <title>Newsletter | PureLiving</title>
+<meta name="description" content="PureLiving demo newsletter signup">
 
 <!-- Google Tag Manager -->
 <script>
@@ -20,7 +21,7 @@ f.parentNode.insertBefore(j,f);
 <style>
 *{box-sizing:border-box}
 body{margin:0;font-family:Arial,sans-serif;background:#f4f8f3;color:#24382c}
-header{padding:18px 6%;background:white;border-bottom:1px solid #e1e8df;display:flex;justify-content:space-between;align-items:center;gap:15px;flex-wrap:wrap}
+header{padding:18px 6%;background:#fff;border-bottom:1px solid #e1e8df;display:flex;justify-content:space-between;align-items:center;gap:15px;flex-wrap:wrap}
 .brand{font-size:24px;font-weight:800;color:#245c43;text-decoration:none}
 nav{display:flex;gap:16px;flex-wrap:wrap}
 nav a{color:#35463b;text-decoration:none;font-size:14px}
@@ -33,9 +34,10 @@ h2{margin-top:0}
 .description{color:#5b6b5f;line-height:1.7}
 label{display:block;font-weight:bold;margin:18px 0 8px;font-size:14px}
 input[type=email],input[type=text]{width:100%;padding:13px;border:1px solid #ccd7cc;border-radius:8px;font-size:16px}
-.consent{display:flex;gap:10px;align-items:flex-start;font-weight:normal;line-height:1.5}
+.consent{display:flex;gap:10px;align-items:flex-start;font-weight:normal;line-height:1.5;margin-top:18px}
 .consent input{margin-top:4px}
 button{width:100%;margin-top:20px;padding:14px;border:0;border-radius:30px;background:#286443;color:white;font-size:16px;font-weight:bold;cursor:pointer}
+button:hover{background:#1d5034}
 button:disabled{opacity:.65;cursor:not-allowed}
 .notice{font-size:12px;color:#6b786e;line-height:1.7;margin-top:20px}
 footer{text-align:center;padding:28px;color:#6a766c;font-size:13px}
@@ -83,7 +85,7 @@ footer{text-align:center;padding:28px;color:#6a766c;font-size:13px}
 <button type="submit" id="subscribeButton">Subscribe</button>
 </form>
 
-<p class="notice">Demo only: use a dummy email address. This form does not save your email or create a real subscription.</p>
+<p class="notice">Demo only: use a dummy email address. No email is stored or sent to a mailing list.</p>
 </section>
 </main>
 
@@ -130,7 +132,9 @@ form.addEventListener('submit',function(e){
     method:'demo_form'
   });
 
-  window.location.href='https://kajanegi8744-cyber.github.io/pureliving-academy/newsletter-success.html';
+  window.location.assign(
+    'https://kajanegi8744-cyber.github.io/pureliving-academy/newsletter-success.html'
+  );
 });
 })();
 </script>
