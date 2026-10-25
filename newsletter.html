@@ -3,8 +3,10 @@
 <html lang="en">
 <head>
 <meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1">
-<title>Subscription Successful | PureLiving</title>
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Newsletter | PureLiving</title>
+
+<!-- Google Tag Manager -->
 <script>
 (function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
 new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
@@ -13,22 +15,125 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
 f.parentNode.insertBefore(j,f);
 })(window,document,'script','dataLayer','GTM-ML22WP84');
 </script>
+<!-- End Google Tag Manager -->
+
 <style>
-body{margin:0;padding:20px;min-height:100vh;box-sizing:border-box;display:grid;place-items:center;background:#f3f8f2;font-family:Arial,sans-serif;color:#244332}
-.card{width:100%;max-width:500px;box-sizing:border-box;background:white;padding:40px 25px;border-radius:20px;text-align:center}
-.check{font-size:55px;color:#247345}
-h1{font-size:32px}
-p{color:#607064;line-height:1.8}
-a{display:inline-block;margin-top:18px;padding:14px 24px;background:#286443;color:white;text-decoration:none;border-radius:30px;font-weight:bold}
+*{box-sizing:border-box}
+body{margin:0;font-family:Arial,sans-serif;background:#f4f8f3;color:#24382c}
+header{padding:18px 6%;background:white;border-bottom:1px solid #e1e8df;display:flex;justify-content:space-between;align-items:center;gap:15px;flex-wrap:wrap}
+.brand{font-size:24px;font-weight:800;color:#245c43;text-decoration:none}
+nav{display:flex;gap:16px;flex-wrap:wrap}
+nav a{color:#35463b;text-decoration:none;font-size:14px}
+.hero{background:#e4eee2;padding:45px 20px;text-align:center}
+.hero h1{font-size:clamp(30px,5vw,44px);margin:0 0 12px}
+.hero p{max-width:620px;margin:auto;color:#56675a;line-height:1.7}
+main{max-width:650px;margin:40px auto;padding:0 20px}
+.card{background:white;padding:30px;border-radius:16px;border:1px solid #dfe8df}
+h2{margin-top:0}
+.description{color:#5b6b5f;line-height:1.7}
+label{display:block;font-weight:bold;margin:18px 0 8px;font-size:14px}
+input[type=email],input[type=text]{width:100%;padding:13px;border:1px solid #ccd7cc;border-radius:8px;font-size:16px}
+.consent{display:flex;gap:10px;align-items:flex-start;font-weight:normal;line-height:1.5}
+.consent input{margin-top:4px}
+button{width:100%;margin-top:20px;padding:14px;border:0;border-radius:30px;background:#286443;color:white;font-size:16px;font-weight:bold;cursor:pointer}
+button:disabled{opacity:.65;cursor:not-allowed}
+.notice{font-size:12px;color:#6b786e;line-height:1.7;margin-top:20px}
+footer{text-align:center;padding:28px;color:#6a766c;font-size:13px}
 </style>
 </head>
 <body>
+
+<!-- Google Tag Manager (noscript) -->
 <noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-ML22WP84" height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
-<main class="card">
-<div class="check">✓</div>
-<h1>You're Subscribed!</h1>
-<p>Your demo signup was successful. No email was stored or sent to a real mailing list.</p>
-<a href="index.html">Back to Home</a>
+<!-- End Google Tag Manager (noscript) -->
+
+<header>
+<a class="brand" href="index.html">PureLiving</a>
+<nav>
+<a href="index.html">Home</a>
+<a href="products.html">Shop</a>
+<a href="resources.html">Resources</a>
+<a href="contact.html">Contact</a>
+<a href="account.html">My Account</a>
+</nav>
+</header>
+
+<section class="hero">
+<h1>Good Ideas, Delivered</h1>
+<p>Join our demo newsletter to practise form tracking and lead measurement.</p>
+</section>
+
+<main>
+<section class="card">
+<h2>Join our newsletter</h2>
+<p class="description">Explore sample updates about wellness, healthy routines and new resources.</p>
+
+<form id="newsletterForm">
+<label for="firstName">First name (optional)</label>
+<input id="firstName" name="first_name" type="text" autocomplete="off">
+
+<label for="email">Email address *</label>
+<input id="email" name="email" type="email" autocomplete="off" required placeholder="demo@example.com">
+
+<label class="consent">
+<input id="consent" type="checkbox" required>
+<span>I agree to the demo newsletter signup terms.</span>
+</label>
+
+<button type="submit" id="subscribeButton">Subscribe</button>
+</form>
+
+<p class="notice">Demo only: use a dummy email address. This form does not save your email or create a real subscription.</p>
+</section>
 </main>
+
+<footer>© 2026 PureLiving Academy · Demo website for analytics practice</footer>
+
+<script>
+(function(){
+window.dataLayer=window.dataLayer||[];
+
+var form=document.getElementById('newsletterForm');
+var button=document.getElementById('subscribeButton');
+var started=false;
+var submitted=false;
+
+form.addEventListener('focusin',function(){
+  if(!started){
+    started=true;
+    window.dataLayer.push({
+      event:'newsletter_form_start',
+      form_id:'newsletterForm',
+      form_type:'newsletter'
+    });
+  }
+});
+
+form.addEventListener('submit',function(e){
+  e.preventDefault();
+
+  if(submitted)return;
+
+  if(!form.checkValidity()){
+    form.reportValidity();
+    return;
+  }
+
+  submitted=true;
+  button.disabled=true;
+  button.textContent='Processing...';
+
+  window.dataLayer.push({
+    event:'newsletter_signup',
+    form_id:'newsletterForm',
+    form_type:'newsletter',
+    method:'demo_form'
+  });
+
+  window.location.href='https://kajanegi8744-cyber.github.io/pureliving-academy/newsletter-success.html';
+});
+})();
+</script>
+
 </body>
 </html>
