@@ -1,28 +1,80 @@
-<!doctype html>
+
+<!DOCTYPE html>
 <html lang="en">
 <head>
-<meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1">
-<meta name="description" content="Update quantities, remove products, and review your demo order.">
-<title>Your Shopping Cart | PureLiving</title>
-<!-- Google Tag Manager -->
-<script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
-new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
-j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
-'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
-})(window,document,'script','dataLayer','GTM-ML22WP84');</script>
-<!-- End Google Tag Manager -->
-<link rel="stylesheet" href="css/styles.css">
-<script defer src="js/app.js"></script>
-
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Shopping Bag | PureLiving</title>
+<script>
+window.dataLayer=window.dataLayer||[];
+(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src='https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);})(window,document,'script','dataLayer','GTM-ML22WP84');
+</script>
+<style>
+*{box-sizing:border-box}body{margin:0;font-family:Arial,sans-serif;color:#24352d;line-height:1.6}a{text-decoration:none;color:inherit}button{cursor:pointer;font:inherit}.top{background:#173e34;color:#fff;text-align:center;padding:8px;font-size:12px}.header{padding:16px 5%;display:flex;justify-content:space-between;align-items:center;gap:15px;flex-wrap:wrap;border-bottom:1px solid #e5e9e2}.logo{font-family:Georgia,serif;font-size:27px;font-weight:bold;color:#173e34}.logo span{color:#c99b51}.nav{display:flex;gap:20px;font-size:13px;font-weight:bold}.wrap{max-width:1050px;margin:auto;padding:40px 22px 70px}.eyebrow{font-size:11px;letter-spacing:2px;color:#9a7337;font-weight:bold;text-transform:uppercase}h1{font-family:Georgia,serif;font-size:44px;font-weight:normal;line-height:1.2;margin:10px 0}.muted{font-size:13px;color:#6c776e}.layout{display:grid;grid-template-columns:1.5fr .8fr;gap:30px;margin-top:28px}.items,.summary{border:1px solid #e5e9e2;border-radius:4px;padding:22px}.item{display:grid;grid-template-columns:65px 1fr auto;gap:15px;align-items:center;padding:17px 0;border-bottom:1px solid #e5e9e2}.item:last-child{border-bottom:0}.icon{width:65px;height:65px;background:#f4f2eb;display:flex;align-items:center;justify-content:center;font-size:32px}.name{font-weight:bold;font-size:14px}.price{font-size:13px;color:#173e34;font-weight:bold}.qty{display:flex;align-items:center;gap:10px;margin-top:8px}.qty button{background:white;border:1px solid #dfe3dc;padding:3px 10px}.remove{border:0;background:transparent;color:#9b4940;font-size:12px;padding:5px 0}.line{display:flex;justify-content:space-between;gap:12px;padding:10px 0;font-size:13px}.grand{font-size:19px;font-weight:bold;border-top:1px solid #e5e9e2;margin-top:10px;padding-top:18px}.btn{display:block;text-align:center;width:100%;border:1px solid #173e34;background:#173e34;color:white;padding:13px 15px;font-size:13px;font-weight:bold;border-radius:3px;margin-top:16px}.btn.alt{background:white;color:#173e34}.empty{text-align:center;background:#f6f5ef;padding:50px 20px}.empty .iconbig{font-size:45px}.footer{background:#f4f3ed;padding:25px 5%;font-size:12px;color:#69736b}.toast{display:none;position:fixed;right:20px;bottom:20px;background:#173e34;color:white;padding:13px 18px;z-index:5}@media(max-width:750px){.layout{grid-template-columns:1fr}.wrap{padding:28px 15px 45px}.item{grid-template-columns:55px 1fr auto;gap:10px}.icon{width:55px;height:55px}.nav{gap:12px;flex-wrap:wrap}h1{font-size:36px}}
+</style>
 </head>
 <body>
-<!-- Google Tag Manager (noscript) -->
-<noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-ML22WP84"
-height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
-<!-- End Google Tag Manager (noscript) -->
-<div id="site-header"></div>
+<noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-ML22WP84" height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+<div class="top">THOUGHTFUL ESSENTIALS FOR EVERYDAY LIVING · DEMO STORE</div>
+<header class="header">
+<a class="logo" href="index.html">Pure<span>Living</span></a>
+<nav class="nav"><a href="index.html">Home</a><a href="products.html">Shop</a><a href="resources.html">Resources</a><a href="contact.html">Contact</a><a href="cart.html">Bag (<span id="count">0</span>)</a></nav>
+</header>
 <main class="wrap">
-<span class="eyebrow">Your selection</span><h1>Shopping cart</h1><p>Change quantities or remove items. Cart is stored locally in this browser for this demo.</p><div id="cart-content"></div>
+<div class="eyebrow">Your selection</div><h1>Shopping bag</h1><p class="muted">Review your items before continuing to demo checkout.</p>
+<div id="content"></div>
 </main>
-<div id="site-footer"></div>
-</body></html>
+<footer class="footer">© 2026 PureLiving Demo Store · Demo orders only · <a href="index.html">Home</a></footer>
+<div class="toast" id="toast" role="status"></div>
+<script>
+(function(){
+const $=s=>document.querySelector(s);
+const money=n=>"₹"+Number(n).toLocaleString("en-IN");
+const products=[
+{id:"PL-WP-001",name:"Aqua Pro Water Purifier",price:8999,icon:"💧"},
+{id:"PL-WP-002",name:"Aqua Max Water Purifier",price:12499,icon:"🚰"},
+{id:"PL-WP-003",name:"Aqua Compact Purifier",price:6499,icon:"🫗"},
+{id:"PL-AP-001",name:"Air Pure 300",price:7499,icon:"🌿"},
+{id:"PL-AP-002",name:"Air Pure 500",price:11999,icon:"🍃"},
+{id:"PL-KA-001",name:"Smart Electric Kettle",price:1499,icon:"☕"},
+{id:"PL-KA-002",name:"Mixer Pro",price:3499,icon:"🥣"},
+{id:"PL-KA-003",name:"Daily Use Blender",price:2999,icon:"🥤"},
+{id:"PL-HE-001",name:"Home Care Kit",price:999,icon:"🧺"},
+{id:"PL-HE-002",name:"Smart Room Humidifier",price:2499,icon:"💨"},
+{id:"PL-HE-003",name:"Digital Kitchen Scale",price:799,icon:"⚖️"},
+{id:"PL-HE-004",name:"Premium Storage Set",price:1299,icon:"📦"}
+];
+const key="pl_demo_cart_v1";
+const fire=(event,data={})=>{window.dataLayer=window.dataLayer||[];window.dataLayer.push({...data,event,demo_mode:true})};
+function read(){try{return JSON.parse(localStorage.getItem(key)||"[]")}catch(e){return[]}}
+function save(cart){localStorage.setItem(key,JSON.stringify(cart));$("#count").textContent=cart.reduce((s,x)=>s+x.qty,0)}
+function render(){
+const cart=read();save(cart);
+if(!cart.length){
+$("#content").innerHTML='<div class="empty"><div class="iconbig">🛍️</div><h2>Your bag is empty</h2><p class="muted">Discover something useful for your home.</p><a class="btn" style="max-width:230px;margin:18px auto" href="products.html">Explore products</a></div>';
+fire("view_cart",{currency:"INR",value:0,items:[]});return;
+}
+const total=cart.reduce((s,x)=>s+x.price*x.qty,0);
+$("#content").innerHTML='<div class="layout"><section class="items"><strong>Your items ('+cart.reduce((s,x)=>s+x.qty,0)+')</strong>'+cart.map(x=>{const p=products.find(y=>y.id===x.id);return '<div class="item"><div class="icon">'+(p?p.icon:"📦")+'</div><div><div class="name">'+(p?p.name:"Demo product")+'</div><div class="price">'+money(x.price)+' each</div><div class="qty"><button data-qty="'+x.id+'" data-delta="-1" aria-label="Decrease quantity">−</button><span>'+x.qty+'</span><button data-qty="'+x.id+'" data-delta="1" aria-label="Increase quantity">+</button></div><button class="remove" data-remove="'+x.id+'">Remove item</button></div><strong>'+money(x.price*x.qty)+'</strong></div>'}).join("")+'<p><a class="btn alt" href="products.html">← Continue shopping</a></p></section><aside class="summary"><strong>Order summary</strong><div class="line"><span>Subtotal</span><strong>'+money(total)+'</strong></div><div class="line"><span>Delivery</span><span>Free (demo)</span></div><div class="line"><span>Tax</span><span>₹0</span></div><div class="line grand"><span>Total</span><span>'+money(total)+'</span></div><p class="muted">No payment will be collected. This is a practice order.</p><a class="btn" href="index.html#checkout" id="checkout">Proceed to demo checkout →</a></aside></div>';
+fire("view_cart",{currency:"INR",value:total,items:cart.map(x=>{const p=products.find(y=>y.id===x.id);return{item_id:x.id,item_name:p?p.name:x.id,price:x.price,quantity:x.qty}})});
+}
+$("#content").addEventListener("click",e=>{
+const q=e.target.closest("[data-qty]"),r=e.target.closest("[data-remove]");
+let cart=read();
+if(q){
+const item=cart.find(x=>x.id===q.dataset.qty);if(!item)return;
+item.qty+=Number(q.dataset.delta);
+if(item.qty<1)cart=cart.filter(x=>x.id!==item.id);
+save(cart);fire("cart_quantity_change",{item_id:q.dataset.qty,quantity:item?Math.max(0,item.qty):0});render();
+}
+if(r){
+cart=cart.filter(x=>x.id!==r.dataset.remove);save(cart);
+fire("remove_from_cart",{item_id:r.dataset.remove});render();
+}
+});
+$("#content").addEventListener("click",e=>{if(e.target.closest("#checkout"))fire("begin_checkout",{currency:"INR",value:read().reduce((s,x)=>s+x.price*x.qty,0)})});
+render();
+})();
+</script>
+</body>
+</html>
