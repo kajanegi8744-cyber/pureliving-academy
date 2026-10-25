@@ -1,0 +1,44 @@
+[
+  {
+    "id": "pl-101",
+    "name": "PureFlow RO Water Purifier",
+    "category": "Water Purifiers",
+    "price": 8999,
+    "description": "Demo listing for home water filtration practice."
+  },
+  {
+    "id": "pl-102",
+    "name": "Breeze HEPA Air Purifier",
+    "category": "Air Purifiers",
+    "price": 7499,
+    "description": "Demo listing for room air filtration practice."
+  },
+  {
+    "id": "pl-103",
+    "name": "Everyday Electric Kettle",
+    "category": "Kitchen Appliances",
+    "price": 1299,
+    "description": "Demo listing for kitchen appliance practice."
+  },
+  {
+    "id": "pl-104",
+    "name": "Smart Storage Essentials Set",
+    "category": "Home Essentials",
+    "price": 899,
+    "description": "Demo listing for home organization practice."
+  },
+  {
+    "id": "pl-105",
+    "name": "PureFlow Replacement Filter",
+    "category": "Water Purifiers",
+    "price": 1499,
+    "description": "Demo replacement filter product."
+  },
+  {
+    "id": "pl-106",
+    "name": "Compact Desk Air Cleaner",
+    "category": "Air Purifiers",
+    "price": 3299,
+    "description": "Demo compact air-cleaning product."
+  }
+]
