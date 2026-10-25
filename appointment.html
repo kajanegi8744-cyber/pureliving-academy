@@ -1,28 +1,188 @@
-<!doctype html>
+```html
+<!DOCTYPE html>
 <html lang="en">
 <head>
-<meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1">
-<meta name="description" content="Choose a demo appointment slot.">
-<title>Book an Appointment | PureLiving</title>
-<!-- Google Tag Manager -->
-<script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
-new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
-j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
-'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
-})(window,document,'script','dataLayer','GTM-ML22WP84');</script>
-<!-- End Google Tag Manager -->
-<link rel="stylesheet" href="css/styles.css">
-<script defer src="js/app.js"></script>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Book an Appointment | PureLiving</title>
+  <meta name="description" content="Book a wellness consultation appointment with PureLiving.">
 
+  <!-- Google Tag Manager -->
+  <script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+  new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+  j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+  'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+  })(window,document,'script','dataLayer','GTM-ML22WP84');</script>
+  <!-- End Google Tag Manager -->
+
+  <style>
+    *{box-sizing:border-box}
+    body{margin:0;font-family:Arial,sans-serif;background:#f5f7f2;color:#24372c}
+    header{background:#fff;padding:18px 7%;display:flex;justify-content:space-between;align-items:center;gap:18px;flex-wrap:wrap;border-bottom:1px solid #e3e9e1}
+    .brand{font-size:24px;font-weight:800;color:#245c43;text-decoration:none}
+    nav{display:flex;gap:18px;flex-wrap:wrap}
+    nav a{color:#35463b;text-decoration:none;font-size:14px}
+    nav a:hover{color:#26734d}
+    .hero{background:#e4eee2;padding:45px 7%;text-align:center}
+    .hero h1{font-size:36px;margin:0 0 12px}
+    .hero p{max-width:650px;margin:auto;line-height:1.7;color:#526456}
+    main{max-width:1050px;margin:38px auto;padding:0 20px;display:grid;grid-template-columns:0.9fr 1.2fr;gap:28px;align-items:start}
+    .info,.booking{background:#fff;padding:28px;border-radius:16px;box-shadow:0 8px 30px #233b2c0d}
+    h2{margin-top:0}
+    .info p{color:#5d6c61;line-height:1.8}
+    .item{padding:13px 0;border-bottom:1px solid #edf0eb}
+    label{display:block;font-size:14px;font-weight:700;margin:17px 0 7px}
+    input,select,textarea{width:100%;padding:12px;border:1px solid #ccd5cb;border-radius:8px;font:inherit;background:#fff}
+    input:focus,select:focus,textarea:focus{outline:2px solid #a8cfb1;border-color:#397c52}
+    textarea{min-height:90px;resize:vertical}
+    button{width:100%;padding:14px;margin-top:20px;border:0;border-radius:9px;background:#286443;color:#fff;font-size:16px;font-weight:700;cursor:pointer}
+    button:hover{background:#1d5034}
+    button:disabled{opacity:.6;cursor:not-allowed}
+    .note{font-size:12px;color:#6b786e;line-height:1.6}
+    #success{display:none;background:#e5f5e8;color:#205b34;padding:16px;border-radius:9px;margin-top:18px;line-height:1.6}
+    footer{text-align:center;padding:28px 15px;color:#6a766c;font-size:13px}
+    @media(max-width:700px){main{grid-template-columns:1fr}.hero h1{font-size:29px}header{padding:16px 5%}}
+  </style>
 </head>
 <body>
-<!-- Google Tag Manager (noscript) -->
-<noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-ML22WP84"
-height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
-<!-- End Google Tag Manager (noscript) -->
-<div id="site-header"></div>
-<main class="wrap">
-<span class="eyebrow">Let's talk</span><h1>Book a product consultation</h1><form data-demo-form="appointment_booking"><label>Name<input name="name" required minlength="2"></label><label>Email<input type="email" name="email" required></label><label>Preferred date<input type="date" name="date" required></label><label>Preferred time<select name="time" required><option value="">Choose a time</option><option>10:00 AM</option><option>12:00 PM</option><option>3:00 PM</option><option>5:00 PM</option></select></label><button>Book Demo Appointment</button><p class="form-status" aria-live="polite"></p></form>
-</main>
-<div id="site-footer"></div>
-</body></html>
+  <!-- Google Tag Manager (noscript) -->
+  <noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-ML22WP84"
+  height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+  <!-- End Google Tag Manager (noscript) -->
+
+  <header>
+    <a class="brand" href="index.html">PureLiving</a>
+    <nav>
+      <a href="index.html">Home</a>
+      <a href="products.html">Shop</a>
+      <a href="contact.html">Contact</a>
+      <a href="resources.html">Resources</a>
+    </nav>
+  </header>
+
+  <section class="hero">
+    <h1>Book a Consultation</h1>
+    <p>Choose a service and preferred time for your wellness consultation.</p>
+  </section>
+
+  <main>
+    <section class="info">
+      <h2>Your time matters</h2>
+      <p>Use this form to practise appointment booking and conversion tracking on a demo website.</p>
+      <div class="item">✓ Select a consultation service</div>
+      <div class="item">✓ Choose a preferred date and time</div>
+      <div class="item">✓ Receive an on-page confirmation</div>
+      <p class="note">Demo notice: no real appointment is created and no information is sent to a booking system.</p>
+    </section>
+
+    <section class="booking">
+      <h2>Appointment details</h2>
+
+      <form id="appointmentForm">
+        <label for="name">Full name *</label>
+        <input id="name" name="full_name" type="text" autocomplete="name" required>
+
+        <label for="email">Email address *</label>
+        <input id="email" name="email" type="email" autocomplete="email" required>
+
+        <label for="service">Consultation type *</label>
+        <select id="service" name="appointment_type" required>
+          <option value="">Select a service</option>
+          <option value="wellness">Wellness consultation</option>
+          <option value="fitness">Fitness consultation</option>
+          <option value="sleep">Sleep and relaxation</option>
+          <option value="nutrition">Healthy lifestyle consultation</option>
+        </select>
+
+        <label for="date">Preferred date *</label>
+        <input id="date" name="appointment_date" type="date" required>
+
+        <label for="time">Preferred time *</label>
+        <select id="time" name="appointment_time" required>
+          <option value="">Choose a time</option>
+          <option value="10:00">10:00 AM</option>
+          <option value="11:00">11:00 AM</option>
+          <option value="12:00">12:00 PM</option>
+          <option value="14:00">2:00 PM</option>
+          <option value="15:00">3:00 PM</option>
+          <option value="16:00">4:00 PM</option>
+        </select>
+
+        <label for="notes">Additional notes (optional)</label>
+        <textarea id="notes" name="notes" placeholder="Any general information for your demo booking?"></textarea>
+
+        <button type="submit" id="bookButton">Request Appointment</button>
+
+        <div id="success" role="status">
+          <strong>Appointment request submitted!</strong>
+          <p>Your demo request was recorded on this page. No real booking has been made.</p>
+          <a href="index.html">Return to home</a>
+        </div>
+
+        <p class="note">* Required fields. Do not enter sensitive or confidential information.</p>
+      </form>
+    </section>
+  </main>
+
+  <footer>© 2026 PureLiving Academy · Demo website for analytics practice</footer>
+
+  <script>
+    window.dataLayer = window.dataLayer || [];
+
+    (function () {
+      var form = document.getElementById('appointmentForm');
+      var dateInput = document.getElementById('date');
+      var button = document.getElementById('bookButton');
+      var success = document.getElementById('success');
+      var submitted = false;
+      var started = false;
+
+      // Prevent selecting a date in the past.
+      var today = new Date();
+      var localToday = new Date(today.getTime() - today.getTimezoneOffset() * 60000)
+        .toISOString().split('T')[0];
+      dateInput.min = localToday;
+
+      // Track the first interaction with the form.
+      form.addEventListener('focusin', function () {
+        if (!started) {
+          started = true;
+          window.dataLayer.push({
+            event: 'appointment_form_start',
+            form_id: 'appointmentForm',
+            form_type: 'appointment'
+          });
+        }
+      });
+
+      form.addEventListener('submit', function (event) {
+        event.preventDefault();
+
+        if (submitted) return;
+
+        if (!form.checkValidity()) {
+          form.reportValidity();
+          window.dataLayer.push({
+            event: 'appointment_form_validation_error',
+            form_id: 'appointmentForm',
+            form_type: 'appointment'
+          });
+          return;
+        }
+
+        submitted = true;
+        button.disabled = true;
+        button.textContent = 'Request Submitted';
+        success.style.display = 'block';
+
+        window.dataLayer.push({
+          event: 'appointment_booked',
+          form_id: 'appointmentForm',
+          form_type: 'appointment',
+          appointment_type: document.getElementById('service').value
+        });
+
+        window.dataLayer.push({
+          event: 'appointment_form_success',
+          form_id: 'appointmentForm',
+          form
