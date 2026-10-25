@@ -1,0 +1,28 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="description" content="Practice turning client briefs into tracking plans.">
+<title>Client Requirement Simulator | PureLiving</title>
+<!-- Google Tag Manager -->
+<script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+})(window,document,'script','dataLayer','GTM-ML22WP84');</script>
+<!-- End Google Tag Manager -->
+<link rel="stylesheet" href="css/styles.css">
+<script defer src="js/app.js"></script>
+<script defer src="js/simulator.js"></script>
+</head>
+<body>
+<!-- Google Tag Manager (noscript) -->
+<noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-ML22WP84"
+height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+<!-- End Google Tag Manager (noscript) -->
+<div id="site-header"></div>
+<main class="wrap">
+<span class="eyebrow">Think like a consultant</span><h1>Client Requirement Simulator</h1><p>Choose a brief, then draft the plan before opening the suggested answer. Use this as a repeatable interview exercise.</p><label for="scenario">Choose client brief</label><select id="scenario"><option value="lead">Successful lead form</option><option value="download">Different PDF downloads</option><option value="cart">Add to Cart and Purchase</option><option value="ajax">AJAX form without thank-you page</option><option value="duplicate">Duplicate purchase events</option><option value="ads">GA4 event arrives but Ads conversion is missing</option><option value="params">Event parameters are missing</option></select><div class="card"><h2>Your plan</h2><textarea id="plan" rows="8" placeholder="Write objective, event, parameters, trigger, tag, test steps, risks and interview explanation..."></textarea><button id="save-plan">Save plan in this browser</button> <button id="show-answer" class="secondary">Show sample answer</button><p id="plan-status" aria-live="polite"></p><div id="sample-answer" class="hidden"></div></div>
+</main>
+<div id="site-footer"></div>
+</body></html>

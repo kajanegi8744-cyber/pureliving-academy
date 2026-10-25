@@ -1,0 +1,28 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="description" content="Reference event names, parameters and implementation notes.">
+<title>Tracking Documentation | PureLiving</title>
+<!-- Google Tag Manager -->
+<script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+})(window,document,'script','dataLayer','GTM-ML22WP84');</script>
+<!-- End Google Tag Manager -->
+<link rel="stylesheet" href="css/styles.css">
+<script defer src="js/app.js"></script>
+
+</head>
+<body>
+<!-- Google Tag Manager (noscript) -->
+<noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-ML22WP84"
+height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+<!-- End Google Tag Manager (noscript) -->
+<div id="site-header"></div>
+<main class="wrap">
+<span class="eyebrow">Implementation reference</span><h1>Tracking documentation</h1><h2>Event catalogue</h2><table class="table"><thead><tr><th>Event</th><th>When to send</th><th>Useful parameters</th></tr></thead><tbody><tr><td><code>view_item_list</code></td><td>Product list rendered</td><td>item_list_name, items</td></tr><tr><td><code>select_item</code></td><td>User selects product</td><td>item_list_name, items</td></tr><tr><td><code>view_item</code></td><td>Product detail viewed</td><td>currency, value, items</td></tr><tr><td><code>add_to_cart</code></td><td>Item added successfully</td><td>currency, value, items</td></tr><tr><td><code>begin_checkout</code></td><td>Checkout begins with cart</td><td>currency, value, items</td></tr><tr><td><code>purchase</code></td><td>Demo order succeeds</td><td>transaction_id, currency, value, items</td></tr><tr><td><code>generate_lead</code></td><td>Demo form validates and succeeds</td><td>form_name, lead_type, submission_method</td></tr><tr><td><code>file_download</code></td><td>Download link clicked</td><td>file_name, file_extension, link_text, link_url</td></tr><tr><td><code>sign_up</code></td><td>Demo newsletter/account action</td><td>method</td></tr></tbody></table><h2>Implementation rules</h2><ul><li>Do not send names, email addresses, phone numbers, addresses, passwords or other personally identifiable information to GA4.</li><li>Only mark business outcomes as key events/conversions; do not mark every interaction as a conversion.</li><li>For purchase deduplication, preserve a stable unique transaction ID and verify refresh/back/retry behavior.</li><li>GA4 key event import and direct Google Ads conversion tracking are different implementation paths. Avoid double-counting the same outcome.</li><li>Consent requirements and regional policies must be reviewed before production use.</li></ul><h2>GTM setup checklist</h2><ol><li>Confirm correct container and environment.</li><li>Create GA4 Google tag with the intended Measurement ID.</li><li>Create Custom Event triggers for website dataLayer event names.</li><li>Create Data Layer Variables for parameters.</li><li>Map GA4 event parameters to variables.</li><li>Preview success and failure paths.</li><li>Publish only after review and consent checks.</li><li>Verify GA4 DebugView and relevant Google Ads diagnostics.</li></ol><p><a href="downloads/conversion-tracking-practice-guide.pdf" download data-download="conversion-tracking-practice-guide.pdf">Download Conversion Tracking Practice Guide</a></p>
+</main>
+<div id="site-footer"></div>
+</body></html>

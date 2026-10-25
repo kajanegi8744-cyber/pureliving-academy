@@ -1,0 +1,28 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="description" content="Practice Tags, Triggers, Variables, events and debugging.">
+<title>GTM Practice Lab | PureLiving</title>
+<!-- Google Tag Manager -->
+<script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+})(window,document,'script','dataLayer','GTM-ML22WP84');</script>
+<!-- End Google Tag Manager -->
+<link rel="stylesheet" href="css/styles.css">
+<script defer src="js/app.js"></script>
+
+</head>
+<body>
+<!-- Google Tag Manager (noscript) -->
+<noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-ML22WP84"
+height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+<!-- End Google Tag Manager (noscript) -->
+<div id="site-header"></div>
+<main class="wrap">
+<span class="eyebrow">Hands-on learning</span><h1>GTM Practice Lab</h1><p>Use these exercises alongside your actual Google Tag Manager account. This website pushes demo events to the browser dataLayer; it does not configure tags in GTM automatically.</p><div class="cards"><div class="card"><span class="pill">Module 01</span><h2>Tag, Trigger, Variable</h2><p><b>Client brief:</b> Track a PDF guide click.</p><p><b>Event:</b> <span class="tag">file_download</span></p><p><b>Parameters:</b> file_name, file_extension, link_text, link_url, demo_mode.</p><p><b>Practice:</b> Create a Custom Event trigger named <i>CE - file_download</i>, then a GA4 Event tag with the same event name.</p></div><div class="card"><span class="pill">Module 02</span><h2>Custom Event Trigger</h2><p><b>Client brief:</b> Track a successful contact form.</p><p><b>Event:</b> <span class="tag">generate_lead</span></p><p><b>Practice:</b> Submit the contact form with valid values; inspect dataLayer and compare it with an invalid submission.</p></div><div class="card"><span class="pill">Module 03</span><h2>Click trigger choices</h2><p><b>Just Links:</b> link elements. <b>All Elements:</b> broader click elements. Use a custom event when the website has a stable dataLayer event.</p><p><b>Practice:</b> Compare a click listener with the custom event push and avoid counting click-only as success.</p></div><div class="card"><span class="pill">Module 04</span><h2>Page lifecycle events</h2><p><b>Container Loaded:</b> GTM container initialization event. <b>DOM Ready:</b> document DOM is parsed. <b>Window Loaded:</b> page load and dependent resources have completed.</p><p>Choose triggers based on when the required elements/data exist.</p></div><div class="card"><span class="pill">Module 05</span><h2>Variables and parameters</h2><p>Create Data Layer Variables using exact parameter keys such as <span class="tag">file_name</span> and <span class="tag">form_name</span>. Test values in Preview before mapping them into event parameters.</p></div><div class="card"><span class="pill">Module 06</span><h2>Debugging exercise</h2><p>Submit an invalid form, then a valid one. Check event timeline, Tags Fired/Not Fired, trigger conditions, parameter values, consent and duplicate firing.</p></div></div><section class="card" style="margin-top:20px"><h2>Try a practice download event</h2><p>Open the browser console and inspect <span class="tag">window.dataLayer</span> after downloading a guide.</p><a class="btn" href="resources.html">Open resource library</a></section>
+</main>
+<div id="site-footer"></div>
+</body></html>
