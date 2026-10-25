@@ -1,28 +1,162 @@
-<!doctype html>
+
+<!DOCTYPE html>
 <html lang="en">
 <head>
-<meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1">
-<meta name="description" content="Subscribe in demo mode.">
-<title>Newsletter Signup | PureLiving</title>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Newsletter | PureLiving</title>
+<meta name="description" content="Join the PureLiving demo newsletter.">
+
 <!-- Google Tag Manager -->
-<script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+<script>
+(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
 new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
 j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
-'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
-})(window,document,'script','dataLayer','GTM-ML22WP84');</script>
+'https://www.googletagmanager.com/gtm.js?id='+i+dl;
+f.parentNode.insertBefore(j,f);
+})(window,document,'script','dataLayer','GTM-ML22WP84');
+</script>
 <!-- End Google Tag Manager -->
-<link rel="stylesheet" href="css/styles.css">
-<script defer src="js/app.js"></script>
 
+<style>
+*{box-sizing:border-box}
+body{margin:0;font-family:Arial,sans-serif;background:#f5f8f3;color:#24382c}
+header{padding:18px 7%;background:#fff;border-bottom:1px solid #e1e8df;display:flex;justify-content:space-between;align-items:center;gap:18px;flex-wrap:wrap}
+.brand{font-size:24px;font-weight:800;color:#245c43;text-decoration:none}
+nav{display:flex;gap:18px;flex-wrap:wrap}
+nav a{font-size:14px;color:#35463b;text-decoration:none}
+.hero{background:#e4eee2;padding:55px 20px;text-align:center}
+.eyebrow{font-size:12px;font-weight:bold;letter-spacing:2px;color:#26734d}
+h1{font-size:clamp(32px,5vw,46px);margin:14px 0}
+.hero p{max-width:620px;margin:auto;color:#56675a;line-height:1.7}
+main{max-width:900px;margin:40px auto;padding:0 20px}
+.card{background:#fff;border:1px solid #e0e8df;border-radius:18px;padding:30px;max-width:650px;margin:auto;box-shadow:0 8px 30px #233b2c0d}
+h2{margin-top:0}
+.description{color:#637066;line-height:1.7}
+label{display:block;font-weight:bold;font-size:14px;margin:18px 0 8px}
+input[type=email],input[type=text]{width:100%;padding:14px;border:1px solid #ccd7cc;border-radius:9px;font:inherit}
+input:focus{outline:2px solid #a8cfb1;border-color:#397c52}
+.check{display:flex;gap:10px;align-items:flex-start;margin-top:18px;font-size:13px;color:#5c6a5f;line-height:1.6}
+.check input{margin-top:4px}
+button{width:100%;padding:14px;margin-top:20px;border:0;border-radius:30px;background:#286443;color:white;font-size:15px;font-weight:bold;cursor:pointer}
+button:hover{background:#1d5034}
+button:disabled{opacity:.65;cursor:not-allowed}
+.message{display:none;margin-top:18px;padding:15px;border-radius:10px;line-height:1.6}
+.success{background:#e4f5e9;color:#17613a}
+.error{background:#ffeded;color:#9a2525}
+.notice{font-size:12px;color:#6b786e;line-height:1.7;margin-top:20px}
+footer{text-align:center;padding:28px;color:#6a766c;font-size:13px}
+</style>
 </head>
 <body>
+
 <!-- Google Tag Manager (noscript) -->
 <noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-ML22WP84"
 height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
 <!-- End Google Tag Manager (noscript) -->
-<div id="site-header"></div>
-<main class="wrap">
-<span class="eyebrow">Stay in the loop</span><h1>Newsletter signup</h1><form data-demo-form="newsletter_signup"><label>Email<input type="email" name="email" required></label><label><input type="checkbox" required style="width:auto"> I understand this is a demo signup.</label><button>Subscribe</button><p class="form-status" aria-live="polite"></p></form>
+
+<header>
+<a class="brand" href="index.html">PureLiving</a>
+<nav>
+<a href="index.html">Home</a>
+<a href="products.html">Shop</a>
+<a href="resources.html">Resources</a>
+<a href="contact.html">Contact</a>
+<a href="account.html">My Account</a>
+</nav>
+</header>
+
+<section class="hero">
+<div class="eyebrow">THE PURELIVING LETTER</div>
+<h1>Good Ideas, Delivered</h1>
+<p>Sign up for our demo newsletter experience to practise form tracking and lead measurement.</p>
+</section>
+
+<main>
+<section class="card">
+<h2>Join our newsletter</h2>
+<p class="description">Get sample updates about wellness, healthy routines and new resources.</p>
+
+<form id="newsletterForm">
+<label for="name">First name (optional)</label>
+<input id="name" name="first_name" type="text" autocomplete="off" placeholder="Your first name">
+
+<label for="email">Email address *</label>
+<input id="email" name="email" type="email" autocomplete="off" placeholder="you@example.com" required>
+
+<label class="check">
+<input id="consent" type="checkbox" required>
+<span>I agree to the demo newsletter signup terms.</span>
+</label>
+
+<button type="submit" id="subscribeButton">Subscribe</button>
+
+<div id="success" class="message success" role="status"></div>
+<div id="error" class="message error" role="alert"></div>
+</form>
+
+<p class="notice">Demo only: your email is not sent to a mailing list or stored on a server. Use a dummy email address. Do not enter sensitive information.</p>
+</section>
 </main>
-<div id="site-footer"></div>
-</body></html>
+
+<footer>© 2026 PureLiving Academy · Demo website for analytics practice</footer>
+
+<script>
+window.dataLayer=window.dataLayer||[];
+
+(function(){
+var form=document.getElementById('newsletterForm');
+var button=document.getElementById('subscribeButton');
+var success=document.getElementById('success');
+var error=document.getElementById('error');
+var started=false;
+var submitted=false;
+
+form.addEventListener('focusin',function(){
+  if(!started){
+    started=true;
+    window.dataLayer.push({
+      event:'newsletter_form_start',
+      form_id:'newsletterForm',
+      form_type:'newsletter'
+    });
+  }
+});
+
+form.addEventListener('submit',function(e){
+  e.preventDefault();
+  success.style.display='none';
+  error.style.display='none';
+
+  if(submitted)return;
+
+  if(!form.checkValidity()){
+    form.reportValidity();
+    error.textContent='Please enter a valid email and accept the demo signup terms.';
+    error.style.display='block';
+    window.dataLayer.push({
+      event:'newsletter_form_validation_error',
+      form_id:'newsletterForm',
+      form_type:'newsletter'
+    });
+    return;
+  }
+
+  submitted=true;
+  button.disabled=true;
+  button.textContent='Subscribed';
+
+  success.textContent='Demo signup successful! No email was saved or added to a mailing list.';
+  success.style.display='block';
+
+  window.dataLayer.push({
+    event:'newsletter_signup',
+    form_id:'newsletterForm',
+    form_type:'newsletter',
+    method:'demo_form'
+  });
+});
+})();
+</script>
+</body>
+</html>
