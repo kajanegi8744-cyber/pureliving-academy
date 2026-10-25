@@ -56,12 +56,12 @@ input,select,textarea,button{font:inherit}
 .notice{background:#f5f4ed;padding:12px;font-size:12px;color:#6c776e;margin:18px 0}
 .footer{background:#f4f3ed;padding:25px 5%;font-size:12px;color:#69736b}
 @media(max-width:750px){
-.layout{grid-template-columns:1fr}
-.wrap{padding:28px 15px 45px}
-.hero h1{font-size:36px}
-.form-grid{grid-template-columns:1fr}
-.full{grid-column:auto}
-.nav{gap:12px;flex-wrap:wrap}
+  .layout{grid-template-columns:1fr}
+  .wrap{padding:28px 15px 45px}
+  .hero h1{font-size:36px}
+  .form-grid{grid-template-columns:1fr}
+  .full{grid-column:auto}
+  .nav{gap:12px;flex-wrap:wrap}
 }
 </style>
 </head>
@@ -165,7 +165,6 @@ Message *
 <p class="muted">For privacy, do not enter passwords, payment details or other sensitive information.</p>
 
 <button class="btn" type="submit" id="submitBtn">Send message →</button>
-
 <p class="message" id="formMessage" role="status" aria-live="polite"></p>
 </form>
 </section>
@@ -232,21 +231,13 @@ Message *
       form_type: "contact"
     });
 
-    message.textContent = "Thank you! Your demo message has been submitted successfully.";
+    message.textContent = "Your message has been submitted. Redirecting...";
     message.style.display = "block";
-    message.style.visibility = "visible";
 
-    form.reset();
-    delete form.dataset.started;
-
-    btn.disabled = false;
-    btn.textContent = "Send message →";
-    delete form.dataset.submitting;
-
-    message.scrollIntoView({
-      behavior: "smooth",
-      block: "nearest"
-    });
+    window.setTimeout(function(){
+      window.location.href =
+        "https://kajanegi8744-cyber.github.io/pureliving-academy/contact-success.html";
+    }, 500);
   });
 
   document.addEventListener("click", function(e){
